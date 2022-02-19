@@ -1,0 +1,80 @@
+<div class="mask d-flex align-items-center h-100 gradient-custom-3">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+          <div class="card" style="border-radius: 15px;">
+            <div class="card-body p-5">
+              <h2 class="text-uppercase text-center mb-5 text-success">Add Nurse</h2>
+
+              <form action=" " method="post">
+                <div class="form-group">
+                  <label for="uname">Enter Your Full Name:</label>
+                  <input type="text" class="form-control" id="uname" placeholder="Enter Your Name" name="uname" required>
+                </div>
+                <div class="form-group">
+                  <label for="email"> Email</label>
+                  <input type="email" class="form-control" id="email" placeholder="Enter your email" name="email">
+                </div>
+
+                <div class="row form-group">
+                  <div class="col">
+                    <label for="nationalId">National Id:</label>
+                    <input type="text" id="nationalId" name="nationalId" pattern="\d*" class="form-control" placeholder="enter your id"  minlength="14" maxlength="14" required/>
+                  </div>
+                  <div class="col">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" name="age" class="form-control " placeholder="Enter your age" required min="1" />
+                  </div>
+               </div>
+               <div class="row form-group">
+                  <div class="col">
+                      <label for="departement">Departement:</label>
+                      <select class="form-control" id="departement" required>
+                        <option >Select Departement:</option>
+                        <option value="1">Cardiology</option>
+                        <option value="2">Hepaotology</option>
+                      </select>
+                    </div>
+               </div>
+                <div class=" row form-group">
+                  <div class="col">
+                    <label for="phone">Enter a phone number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="01xxxxxxxxx" required maxlength="11" minlength="11">
+                  </div>
+                  <div class="col">
+                    <label for="gender">Gender:</label>
+                    <select class="form-control" id="gender" required>
+                      
+                      <option >Select gender:</option>
+                      <option value="1">Male</option>
+                      <option value="2">Female</option>
+                    </select>
+                   </div>
+                </div>
+                <div class="row form-group">
+                  <div class="col">
+                    <label for="degree">degree</label>
+                    <input type="text" id="degree" name="degree" class="form-control" placeholder="Enter degree" required/>
+                  </div>
+                  <div class="col">
+                    <label for="Pass">password</label>
+                    <input type="password" id="Pass" name="Pass" class="form-control " placeholder="password" required />
+                  </div>
+                </div>
+                <div class="form-outline mb-4">
+                  <label for="address"> Adress</label>
+                  <input type="text" class="form-control" id="address" placeholder="Enter address" name="address">
+                </div>
+
+                <div class="d-flex justify-content-center">
+                  <button type="button" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">submit</button>
+                </div>
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+

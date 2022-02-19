@@ -1,0 +1,32 @@
+  <section>
+	<div class="imagebox">
+		<img src="assets/login.jpg">
+	</div>
+	<div class="contentbox">
+		<div class="formbox">
+			<h2>login</h2>
+			<form>
+				<div class="inputbox">
+				<span>Id</span>
+				<input type="number" name="" id="userid" #user required/> 
+				</div>
+				<div class="inputbox">
+				<span>password</span>
+				<input type="password" name="" id="password" #pass required/> 
+				</div>
+				<div class="remember">
+				<label>
+				<input type="checkbox" name=""/>remember me</label>
+				</div>
+				<div class="inputbox">
+				<input type="submit" value="sign in" name="" (click)="login(user.value,pass.value)"/> 
+				</div>
+				
+				<div class="inputbox">
+				<p> don't have an account ?<a href="#">sign up</a></p>
+				</div>
+			</form>
+		</div>
+	</div>
+</section>  
+

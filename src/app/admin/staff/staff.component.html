@@ -1,0 +1,69 @@
+<div class="content">
+    <div class="head">
+      <button type="button" class="btn text-white position-relative" (click)="addstaff()">Add staff member </button>
+    </div>
+    <section class="searching">
+    <div class="searching-fields">
+        <div>
+            <label for="description">description</label>
+            <select name="description" id="description">
+              <option value="receptionist">receptionist </option>
+              <option value="labratory">labratory </option>
+              <option vale="Ray technician">Ray technician</option>
+            </select>
+          </div>
+      <div>
+        <label for="docname" >Name</label>
+        <input type="text" id="docname"/>
+      </div>
+      <div>
+        <label for="docname" for="docemail">Email</label>
+        <input type="email"  id="docemail"/>
+      </div>
+      <div>
+        <label for="gender" >gender</label>
+        <select name="gender" id="gender">
+          <option value="male">male</option>
+          <option vale="female">female</option>
+        </select>
+      </div>
+      <button (click)="search()">search</button>
+      <button >All</button>
+      </div>
+      <div class="doc-list">
+        <table class="table table-striped">
+          <thead class="thead-light">
+            <tr>
+              <th scope="col">Image</th>
+              <th scope="col">Name</th>
+              <th scope="col">National Id</th>
+              <th scope="col">Description</th>              
+              <th scope="col">Email</th>
+              <th scope="col">Gender</th>
+              <th scope="col">Age</th>
+              <th scope="col">Adress</th>
+              <th scope="col">Phone</th>
+              <th scope="col">Options</th>
+            </tr>
+          </thead>
+          <tbody >
+            <tr *ngFor="let i of stafflist;">
+              <td ></td>
+              <td>{{i.name}}</td>
+              <td>{{i.id}}</td>
+              <td>{{i.email}}</td>
+              <td>{{i.gender}}</td>
+              <td>{{i.age}}</td>
+              <td>{{i.address}}</td>
+              <td>{{i.phone}}</td>
+              <td>
+                  <button> <span class="fa-solid fa-trash" style="color:red"> </span></button>
+                  <button > <span class="fa-solid fa-pen-to-square" style="color:green" > </span>
+                  </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>

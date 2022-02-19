@@ -1,0 +1,152 @@
+<div class="container-fluid">
+    <!--top header section==> display operating time and contact-->
+    <div class="header-top ">
+        <div class="row justify-content-between">
+            <div class="col-lg-3 col-md-5 align-self-center">
+                <p>Welcome to university hospital</p>
+            </div>
+            <div class="col-lg-4 col-md-7  text-center align-self-end">
+                <p>Opening Hours : <span>Monday to Saturday - 8am to 9pm</span><br/>&nbsp;&nbsp;Contact : <span>+20-240-654-6810</span> </p>
+            </div>
+        </div>
+    </div>
+    <!-- navigation bar star-->
+    <header>
+        <nav class="navbar navbar-expand-lg ">
+            <div class="navbar-brand">
+                <img width="30" height="30" class="d-flex" src="assets/logo.jpeg" alt="logo" />
+                <h5>&nbsp;&nbsp;&nbsp;hospital university</h5>
+            </div>
+            <button class="btn-success navbar-toggler" (click)=" togglenavbar()" data-target="#navigation" data-toggle="collapse">
+                <span class="fas fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navigation" [ngClass]="{'show':navbartoggle}">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Doctors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Clinic</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Appointment</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" routerLink="/login">Log in</a></li>
+                </ul>
+
+            </div>
+        </nav>
+    </header>
+    <!--navigation bar end-->
+
+    <main>
+        <!--slide show-->
+        <div class="carousel slide " id="slides" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li class="active" data-bs-target="#slides" data-bs-slide-to="0"></li>
+                <li data-bs-target="#slides" data-bs-slide-to="1"></li>
+                <li data-bs-target="#slides" data-bs-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active" style="background-image:url('assets/slide-one.jpg')">
+                    <h2>
+                        We <span>Care</span> for <span>you</span>
+                        <span class="fa fa-plus"></span>
+                    </h2>
+                </div>
+                <div class="carousel-item" style="background-image:url('assets/slide-two.jpg')">
+                    <h2>Medical Services<br><span>That You Can Trust</span>
+                        <span class="fa fa-plus"></span>
+                    </h2>
+                </div>
+                <div class="carousel-item" style="background-image:url('assets/slide-three.jpg')">
+                    <h2>Qualified Staff<br><span>With Expertise<br>in Services We Offer</span>
+                        <span class="fa fa-plus"></span>
+                    </h2>
+                </div>
+                <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#slides">
+                    <span class="fa-solid fa-arrow-right"></span>
+                </button>
+                <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#slides">
+                    <span class="fa-solid fa-arrow-left"></span>
+                </button>
+            </div>
+        </div>
+        <!--display sevice section-->
+        <section class="container pb-5 pt-3">
+            <div class="row">
+                <div class="col-sm-4 text-center mx-auto">
+                    <h4> our services </h4>
+                </div>
+            </div>
+            <div class="row pt-4 ">
+                <div class="col-lg-5  col-sm-6 text-center item ">
+                    <span class="fa-solid fa-user-doctor fa-2x p-3 " style="color:rgb(72, 139, 72) "></span>
+                    <h4>Qualified Doctors</h4>
+                    <p> We have doctors who are qualified in medicine and treat patients at highest level</p>
+                </div>
+                <div class="col-lg-5  col-sm-6 text-center item ">
+                    <span class="fa-solid fa-suitcase-medical fa-2x p-3 " style="color:rgb(72, 139, 72) "></span>
+                    <h4>Medical Counseling</h4>
+                    <p> We provide leading and distinguished physical therapy, hand therapy and rehabilitation to help our patients recover</p>
+                </div>
+            </div>
+            <div class="row pt-4">
+                <div class="col-lg-5 col-sm-6 text-center item ">
+                    <span class="fa-solid fa-square-plus fa-2x p-3 " style="color:rgb(72, 139, 72) "></span>
+                    <h4>Rehabilitation Center</h4>
+                    <p> We provide leading and distinguished physical therapy, hand therapy and rehabilitation to help our patients recover</p>
+                </div>
+                <div class="col-lg-5 col-sm-6 text-center item ">
+                    <span class="fa-solid fa-truck-medical fa-2x p-3 " style="color:rgb(72, 139, 72) "></span>
+                    <h4>Emergency Services</h4>
+                    <p> We provide leading and distinguished physical therapy, hand therapy and rehabilitation to help our patients recover</p>
+                </div>
+            </div>
+        </section>
+        <!--display clinic schedual-->
+        <section class="p-5" style="background-color: rgb(241, 233, 233);;">
+            <h2>Outpatient appointments</h2>
+            <div class="row pb-4 pt-2">
+                <div class="col-sm-2 col-md-1 ">
+                    <img src="assets/neurlogy logo.png" />
+                </div>
+                <div class="col-sm-3 col-md-5  align-self-center">
+                    <h5>neurology Clinic</h5>
+                </div>
+            </div>
+            <div class="row mx-auto">
+                <div class="col-md-6 col-lg-3 text-center">
+                    <img src="assets/doctor.jpg " class="rounded-circle"><br>
+                    <h5>DR/</h5>
+                    <h5>day</h5>
+                    <p></p>
+                </div>
+                <div class="col-md-6 col-lg-3 text-center">
+                    <img src="assets/doctor.jpg " class="rounded-circle"><br>
+                    <h5>DR/</h5>
+                    <h5>day</h5>
+                    <p></p>
+                </div>
+                <div class="col-md-6 col-lg-3 text-center">
+                    <img src="assets/doctor.jpg " class="rounded-circle"><br>
+                    <h5>DR/</h5>
+                    <h5>day</h5>
+                    <p></p>
+                </div>
+                <div class="col-md-6 col-lg-3 text-center">
+                    <img src="assets/doctor.jpg " class="rounded-circle"> <br>
+                    <h5>DR/</h5>
+                    <h5>day</h5>
+                    <p></p>
+                </div>
+            </div>
+        </section>
+    </main>
+</div>

@@ -1,0 +1,36 @@
+<input type="checkbox" id="nav-toggle" />
+<div class="sidebar">
+    <div class="sidebar-brand">
+
+        <h6><span class="fa-solid fa-hospital"></span><span>University Hospital</span></h6>
+    </div>
+    <div class="sidebar-menu">
+        <ul>
+            <li><a class="active" [routerLink]="'dashboard'" (click)="namecomponent('dashboard')"><span class="fa-solid fa-gauge"></span><span>dashboard</span></a></li>
+            <li><a [routerLink]="'doctor'" (click)="namecomponent('doctor')"><span class="fa-solid fa-user-doctor"></span><span>doctors</span></a></li>
+            <li><a [routerLink]="'nurse'" (click)="namecomponent('nurse')"><span class="fa-solid fa-user-nurse"></span><span>nurses</span></a></li>
+            <li><a [routerLink]="'patients'" (click)="namecomponent('patient')"><span class="fa-solid fa-bed-pulse"></span><span>patients</span></a></li>
+            <li><a [routerLink]="'staff'" (click)="namecomponent('staff members')"><span class="fa-solid fa-x-ray"></span><span>staff members</span></a></li>
+            <li><a [routerLink]="'report'" (click)="namecomponent('reports')"><span class="fa fa-file" aria-hidden="true"></span><span>reports</span></a></li>
+            <li><a [routerLink]="''"><span class="fa-solid fa-arrow-right-from-bracket"></span><span>log out</span></a></li>
+        </ul>
+    </div>
+</div>
+<div class="main-content">
+    <header>
+        <h4>
+            <label for="nav-toggle">
+                    <span class="fa-solid fa-grip-lines"></span>
+                </label> {{activecomponent}}
+        </h4>
+        <div class="user-warpper">
+            <img src='assets/admin.jpg' alt='admin photo' width="40px" height="40px" />
+            <div>
+                <h4>ahmed</h4>
+            </div>
+        </div>
+    </header>
+    <div class="main">
+        <router-outlet></router-outlet>
+    </div>
+</div>

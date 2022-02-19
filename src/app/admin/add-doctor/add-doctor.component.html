@@ -1,0 +1,92 @@
+<div class="container">
+    <form class="form ">
+        <div class="row p-3 justify-content-center">
+            <div class="col-sm-3">
+                <label class="form-lable" for="doctorfname">First Name</label>
+                <input class="form-control" type="text" name="doctorfname" id="doctorfname" required/>
+            </div>
+            <div class="col-sm-3">
+                <label class="form-lable" for="doctorlname">Last Name</label>
+                <input class="form-control" type="text" name="doctorlname" id="doctorlname" required/>
+            </div>
+        </div>
+        <div class="row p-3 justify-content-center">
+            <div class="col-sm-3">
+                <label class="form-lable" for="gender">gender</label>
+                <select id="gender" class="form-control">
+          <option vlaue="female">female</option>
+          <option value="male">male</option>
+        </select>
+            </div>
+            <div class="col-sm-3">
+                <label class="form-lable" for="Date-of-Birth">Date of Birth</label>
+                <input class="form-control" type="date" name="Date-of-Birth" id="Date-of-Birth" required/>
+            </div>
+        </div>
+        <div class="row p-3 justify-content-center">
+            <div class="col-sm-3">
+                <label class="form-lable" for="Email">Email</label>
+                <input class="form-control" type="email" name="Email" id="Email" required/>
+            </div>
+            <div class="col-sm-3">
+                <label class="form-lable" for="phone">phone</label>
+                <input class="form-control" type="tel" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{3}" required/>
+            </div>
+        </div>
+        <div class="row p-3 justify-content-center">
+            <div class="col-sm-3">
+                <label class="form-lable" for="address">address</label>
+                <input class="form-control" type="text" name="address" id="address" required/>
+            </div>
+            <div class="col-sm-3">
+                <label class="form-lable" for="Image">Image</label>
+                <input class="form-control" type="file" name="Image" id="Image" accept="image/*" required/>
+            </div>
+        </div>
+        <div class="row p-3 justify-content-center">
+            <div class="col-sm-3">
+                <label class="form-lable" for="specialist">specialist</label>
+                <select id="specialist" class="form-control">
+          <option vlaue="cardio">Cardiology specialty</option>
+          <option vlaue="chest">Chest and Respiratory specialization</option>
+          <option vlaue="Ophthalmology">Ophthalmology&surgery specialization</option>
+          <option vlaue="Obstetrics">Obstetrics&Gynecology specialization</option>
+          <option vlaue="Pediatrics">Pediatrics specialty</option>
+          <option vlaue="Radiology">Radiology specialty</option>
+          <option vlaue="ear,nose">Ear, Nose and Throat specialization</option>
+          <option vlaue="Neurology">Neurology&surgery specialization</option>
+          <option vlaue="Dermatology">Dermatology specialty</option>
+          <option vlaue="Plastic">Plastic surgery specialty</option>
+          <option vlaue="Internalmedicine">Internal medicine specialty</option>
+          <option vlaue="Psychiatry">Psychiatry specialization</option>
+          <option vlaue="Physical">Physical Medicine and Rehabilitation</option>
+          <option vlaue="Anesthesia">Anesthesia specialty</option>
+          <option vlaue="Urology">Urology&its surgery specialization</option>
+        </select>
+            </div>
+            <div class="col-sm-3">
+                <label class="form-lable" for="degree">Degree</label>
+                <input class="form-control" type="text" name="degree" id="degree" required/>
+            </div>
+        </div>
+        <div class="row p-3 justify-content-center">
+            <div class="col-sm-6">
+                <label class="form-lable" for="Department">Department</label>
+                <select id="Department" class="form-control">
+          <option vlaue="">1</option>
+          <option vlaue="">2</option>
+          <option vlaue="">3</option>
+          <option vlaue="">4</option>
+        </select>
+            </div>
+        </div>
+        <div class="row p-3 justify-content-center">
+            <div class="col-sm-3">
+                <input type="submit" value="submit" class="form-control" />
+            </div>
+            <div class="col-sm-3">
+                <input type="button" value="cancel" class="form-control" />
+            </div>
+        </div>
+    </form>
+</div>

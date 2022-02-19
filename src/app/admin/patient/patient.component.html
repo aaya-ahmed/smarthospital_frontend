@@ -1,0 +1,75 @@
+<div class="content">
+  <div class="head">
+    <button type="button" class="btn text-white position-relative" (click)="addpatient()">Add Patient </button>
+  </div>
+  <section class="searching">
+  <div class="searching-fields">
+    <div>
+      <label for="id" >ID</label>
+      <input type="text" id="id" (blur)="setid($event)" disabled/>
+    </div>
+    <div>
+      <label for="name">Name</label>
+      <input type="text"  id="name" (blur)="setname($event)" disabled/>
+    </div>
+    <div>
+      <label for="patienttype" >patient type</label>
+      <select name="patienttype" id="patienttype" (change)="setpatenttype($event)" >
+        <option value="outpatient">outpatient</option>
+        <option vale="inpatient">inpatient</option>
+      </select>
+    </div>
+    <div>
+      <label for="bloodgroup" >bloodgroup</label>
+      <select name="bloodgroup" id="bloodgroup" (change)="setblood($event)">
+        <option value=""></option>
+        <option value="A+">A+</option>
+        <option value="A-">A-</option>
+        <option value="B+">B+</option>
+      </select>
+    </div>
+    <div>
+      <label for="email">Email</label>
+      <input type="email"  id="email" disabled/>
+    </div>
+    <button (click)="search()">search</button>
+    <button (click)="all()">All</button>
+    </div>
+    <div class="patient-list">
+      <table class="table table-striped">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col">Image</th>
+            <th scope="col">Name</th>
+            <th scope="col">National Id</th>
+            <th scope="col">Patient Type</th>
+            <th scope="col">blood group</th>
+            <th scope="col">Age</th>
+            <th scope="col">Occupation</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Adress</th>
+            <th scope="col">Options</th>
+          </tr>
+        </thead>
+        <tbody >
+          <tr *ngFor="let i of patientlist">
+            <td ></td>
+            <td>{{i.name}}</td>
+            <td>{{i.id}}</td>
+            <td>{{i.Patienttype}}</td>
+            <td>{{i.bloodgroup}}</td>
+            <td>{{i.age}}</td>
+            <td>{{i.Occupation}}</td>
+            <td>{{i.phone}}</td>
+            <td>{{i.address}}</td>
+            <td>
+                <button (click)="delete(i)"> <span class="fa-solid fa-trash" style="color:red"> </span></button>
+                <button (click)="showreports()"><span class="fa fa-file" aria-hidden="true" style="color:green" > </span></button>
+                <button > <span class="fa-solid fa-pen-to-square" style="color:green" > </span></button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</div>
