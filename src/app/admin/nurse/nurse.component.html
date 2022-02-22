@@ -1,65 +1,87 @@
-<div class="content">
-    <div class="head">
-      <button type="button" class="btn text-white position-relative" (click)="addNurse()">Add nurse </button>
+<div class="container-fluid">
+    <div class="d-block p-3 head m-0">
+        <button class="btn text-white btn-success " (click)="addNurse() ">Add Nurse </button>
     </div>
-    <section class="searching">
-    <div class="searching-fields">
-      <div>
-        <label for="docname" >Name</label>
-        <input type="text" id="docname"/>
-      </div>
-      <div>
-        <label for="docname" for="docemail">Email</label>
-        <input type="email"  id="docemail"/>
-      </div>
-      <div>
-        <label for="gender" >gender</label>
-        <select name="gender" id="gender">
-          <option value="male">male</option>
-          <option vale="female">female</option>
+    <div class="searching">
+        <input type="checkbox" id="check" />
+        <div class="d-flex">
+            <label for="check"><i class="fa-solid fa-magnifying-glass "></i> &nbsp;&nbsp; srearch for special nurse</label>
+            <div>
+                <button class="btn btn-success">All</button>
+            </div>
+        </div>
+        <div class="searching-fields">
+            <div class="row mx-auto justify-content-between py-3">
+                <div class="col-lg-3 col-md-6">
+                    <label for="docname ">Name</label><br>
+                    <input class="form-control" type="text " id="docname " />
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <label for="docname " for="docemail ">Email</label><br>
+                    <input class="form-control" type="email " id="docemail " />
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <label for="gender ">gender</label><br>
+                    <select class="form-control" name="gender " id="gender ">
+          <option value="male ">male</option>
+          <option vale="female ">female</option>
         </select>
-      </div>
-      <button (click)="search()">search</button>
-      <button >All</button>
-      </div>
-      <div class="doc-list">
-        <table class="table table-striped">
-          <thead class="thead-light">
-            <tr>
-              <th scope="col">Image</th>
-              <th scope="col">Name</th>
-              <th scope="col">National Id</th>
-              <th scope="col">Email</th>
-              <th scope="col">Gender</th>
-              <th scope="col">Age</th>
-              <th scope="col">Adress</th>
-              <th scope="col">Phone</th>
-              <th scope="col">Degree</th>
-              <th scope="col">Department</th>
-              <th scope="col">Options</th>
-            </tr>
-          </thead>
-          <tbody >
-            <tr *ngFor="let i of nurselist;">
-              <td ></td>
-              <td>{{i.name}}</td>
-              <td>{{i.id}}</td>
-              <td>{{i.email}}</td>
-              <td>{{i.gender}}</td>
-              <td>{{i.age}}</td>
-              <td>{{i.address}}</td>
-              <td>{{i.phone}}</td>
-              <td>{{i.dgree}}</td>
-              <td>{{i.department}}</td>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <label for="Specialist ">Specialist</label><br>
+                    <select class="form-control" name="Specialist " id="Specialist " (change)="setspec($event) ">
+          <option value=" "></option>
+          <option value="cardio ">cardio</option>
+          <option value="Neuroscience ">Neuroscience</option>
+          <option value="orthopedic ">orthopedic</option>
+        </select>
+                </div>
+            </div>
+            <div class="float-right">
+                <button class="btn btn-success" (click)="search() ">search</button>
+            </div>
 
-              <td>
-                  <button> <span class="fa-solid fa-trash" style="color:red"> </span></button>
-                  <button > <span class="fa-solid fa-pen-to-square" style="color:green" > </span>
-                  </button>
-              </td>
-            </tr>
-          </tbody>
+        </div>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-striped ">
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>National Id</th>
+                    <th>Email</th>
+                    <th>Gender</th>
+                    <th>Age</th>
+                    <th>Adress</th>
+                    <th>Phone</th>
+                    <th>Degree</th>
+                    <th>Options</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let i of  nurselist; ">
+                    <td></td>
+                    <td>{{i.name}}</td>
+                    <td>{{i.id}}</td>
+                    <td>{{i.email}}</td>
+                    <td>{{i.gender}}</td>
+                    <td>{{i.age}}</td>
+                    <td>{{i.address}}</td>
+                    <td>{{i.phone}}</td>
+                    <td>{{i.dgree}}</td>
+                    <td>
+                        <button> <span class="fa-solid fa-trash " style="color:red "> </span></button>
+                        <button> <span class="fa-solid fa-pen-to-square " style="color:green " > </span>
+          </button>
+                    </td>
+                </tr>
+            </tbody>
         </table>
-      </div>
-    </section>
-  </div>
+    </div>
+
+
+
+
+
+</div>

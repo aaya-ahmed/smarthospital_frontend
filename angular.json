@@ -1,7 +1,7 @@
 {
     "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
     "cli": {
-      "analytics": "c1fa2c74-7952-4e4b-844a-ef47080a3866"
+        "analytics": "c1fa2c74-7952-4e4b-844a-ef47080a3866"
     },
     "version": 1,
     "newProjectRoot": "projects",
@@ -31,6 +31,8 @@
                         ],
                         "styles": [
                             "src/styles.css",
+                            "node_modules/bootstrap/dist/css/bootstrap.min.css",
+                            "node_modules/bootstrap/dist/css/bootstrap.css",
                             "node_modules/@fontawesome/css/brands.css",
                             "node_modules/@fontawesome/css/solid.css",
                             "node_modules/@fontawesome/css/all.css",
@@ -41,7 +43,13 @@
                             "node_modules/@fontawesome/css/regular.min.css",
                             "node_modules/@fontawesome/css/fontawesome.css"
                         ],
-                        "scripts": []
+                        "scripts": [
+                            "node_modules/bootstrap/dist/jquery-3.6.0.min.js",
+                            "node_modules/bootstrap/dist/js/bootstrap.min.js",
+                            "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+                            "src/assets/sidebartoggle.js"
+
+                        ]
                     },
                     "configurations": {
                         "production": {

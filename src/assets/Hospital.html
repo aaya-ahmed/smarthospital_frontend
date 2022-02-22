@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:4200/ -->
+<html lang="en"><link type="text/css" rel="stylesheet" id="dark-mode-custom-link"><link type="text/css" rel="stylesheet" id="dark-mode-general-link"><style lang="en" type="text/css" id="dark-mode-custom-style"></style><style lang="en" type="text/css" id="dark-mode-native-style"></style><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Hospital</title>
+    <!--<base href="/">--><base href=".">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="http://localhost:4200/favicon.ico">
+
+<link rel="stylesheet" href="./Hospital_files/styles.css"><style>
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhcHAuY29tcG9uZW50LmNzcyJ9 */</style><style>*[_ngcontent-olk-c27] {
+      margin: 0;
+      box-sizing: border-box;
+  }
+  
+  .container-fluid[_ngcontent-olk-c27] {
+      padding: 0;
+  }
+  
+  .navbar-brand[_ngcontent-olk-c27] {
+      display: inline-flex;
+  }
+  
+  .navbar[_ngcontent-olk-c27] {
+      width: 100%;
+  }
+  
+  .navbar-nav[_ngcontent-olk-c27] {
+      margin-left: auto;
+  }
+  
+  #slides[_ngcontent-olk-c27] {
+      width: 100%;
+      height: 450px;
+  }
+  
+  .carousel-inner[_ngcontent-olk-c27], .carousel-item[_ngcontent-olk-c27] {
+      width: 100%;
+      height: 100%;
+  }
+  
+  .nav-link[_ngcontent-olk-c27] {
+      color: black;
+      font-weight: 200;
+  }
+  
+  .nav-link[_ngcontent-olk-c27]:hover {
+      background-color: rgb(94, 160, 94);
+      border-radius: 5px;
+      color: white;
+  }
+  
+  .nav-item[_ngcontent-olk-c27] {
+      float: right;
+  }
+  
+  .navbar[_ngcontent-olk-c27]   .navbar-toggler[_ngcontent-olk-c27] {
+      color: rgba(0, 0, 0, .5);
+      border-color: rgba(0, 0, 0, .1);
+  }
+  
+  .navbar[_ngcontent-olk-c27]   button[_ngcontent-olk-c27] {
+      background-color: rgb(94, 160, 94);
+  }
+  
+  .navbar-toggler-icon[_ngcontent-olk-c27] {
+      color: white;
+  }
+  
+  .header-top[_ngcontent-olk-c27] {
+      background-color: rgb(168, 166, 166);
+      padding: 10px 0;
+  }
+  
+  .col-lg-3[_ngcontent-olk-c27]   p[_ngcontent-olk-c27]   span[_ngcontent-olk-c27], .col-lg-9[_ngcontent-olk-c27]   p[_ngcontent-olk-c27]   span[_ngcontent-olk-c27], .col-md-7[_ngcontent-olk-c27]   p[_ngcontent-olk-c27]   span[_ngcontent-olk-c27], .col-md-5[_ngcontent-olk-c27]   p[_ngcontent-olk-c27]   span[_ngcontent-olk-c27] {
+      color: white;
+      justify-content: center;
+  }
+  
+  span[_ngcontent-olk-c27] {
+      text-align: center;
+  }
+  
+  .carousel-item[_ngcontent-olk-c27] {
+      min-height: 450px;
+      background-size: cover;
+      background-position: center;
+      padding: 10% 10%;
+  }
+  
+  .carousel-item[_ngcontent-olk-c27]   h2[_ngcontent-olk-c27] {
+      font-size: 36px;
+      margin: 0 0 20px;
+      font-weight: 400;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+  }
+  
+  .carousel-item[_ngcontent-olk-c27]   h2[_ngcontent-olk-c27]   span[_ngcontent-olk-c27] {
+      font-weight: 800;
+  }
+  
+  .fa-plus[_ngcontent-olk-c27] {
+      background-color: rgb(228, 57, 57);
+      border-radius: 3px;
+      margin-left: 5px;
+  }
+  
+  .carousel-control-next[_ngcontent-olk-c27], .carousel-control-prev[_ngcontent-olk-c27] {
+      background-color: rgb(101, 172, 94);
+      border: none;
+      border-radius: 5%;
+      width: 5%;
+      height: 10%;
+      margin: auto 10px;
+  }
+  
+  main[_ngcontent-olk-c27]   .container[_ngcontent-olk-c27] {
+      margin: 0 auto;
+  }
+  
+  .item[_ngcontent-olk-c27] {
+      font-size: 15px;
+      align-items: center;
+      margin: 0 auto;
+  }
+  
+  .times[_ngcontent-olk-c27] {
+      font-size: 25px;
+  }
+  
+  .col-md-1[_ngcontent-olk-c27]   img[_ngcontent-olk-c27] {
+      width: 60px;
+      height: 60px;
+  }
+  
+  .p-5[_ngcontent-olk-c27]   h1[_ngcontent-olk-c27] {
+      font-weight: 400;
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      color: rgb(98, 151, 98);
+      font-style: italic;
+  }
+  
+  h1[_ngcontent-olk-c27] {
+      font-weight: 800;
+      padding: 20px;
+      margin-top: 5px;
+  }
+  
+  .service[_ngcontent-olk-c27]   h1[_ngcontent-olk-c27] {
+      color: rgb(98, 151, 98);
+  }
+  
+  .collapse[_ngcontent-olk-c27] {
+      float: right;
+  }
+  
+  @media(Max-width:990px) {
+      p[_ngcontent-olk-c27] {
+          text-align: center;
+          font-size: 15px;
+      }
+      .col-md-7[_ngcontent-olk-c27], .col-md-5[_ngcontent-olk-c27] {
+          margin: 0 auto;
+      }
+      .carousel-item[_ngcontent-olk-c27] {
+          padding: 20% 5%;
+      }
+      .col-md-1[_ngcontent-olk-c27]   img[_ngcontent-olk-c27] {
+          width: 30px;
+          height: 30px;
+      }
+  }
+  
+  .block-content[_ngcontent-olk-c27] {
+      padding: 10px;
+      margin: 10px;
+  }
+  
+  .block-content[_ngcontent-olk-c27]   h2[_ngcontent-olk-c27] {
+      border-bottom: 1px solid green;
+      padding: 5px 0;
+  }
+  
+  .block-content[_ngcontent-olk-c27]   p[_ngcontent-olk-c27] {
+      font-size: 20px;
+      text-align: left;
+      padding: 10px 0;
+  }
+  
+  .block-content[_ngcontent-olk-c27]   p[_ngcontent-olk-c27]   a[_ngcontent-olk-c27] {
+      text-decoration: none;
+      color: rgb(30, 122, 92);
+      font-weight: 600;
+  }
+  
+  @media (min-width:992px)and (max-width: 1115px) {
+      p[_ngcontent-olk-c27] {
+          font-size: 13px;
+      }
+  }
+  
+  @media (max-width:777px) {
+      p[_ngcontent-olk-c27] {
+          text-align: center;
+          font-size: 10px;
+      }
+      .carousel-item[_ngcontent-olk-c27] {
+          padding: 30% 5%;
+      }
+      .item[_ngcontent-olk-c27] {
+          padding: 10px 0;
+      }
+      .item[_ngcontent-olk-c27]   p[_ngcontent-olk-c27] {
+          font-size: 15px;
+      }
+      .block-content[_ngcontent-olk-c27] {
+          text-align: center;
+          padding: 10px;
+          margin: 10px;
+      }
+      .block-content[_ngcontent-olk-c27]   p[_ngcontent-olk-c27] {
+          text-align: center;
+          font-size: 20px;
+          padding: 10px 0;
+      }
+  }
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImhvbWUuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiRUFBRTtNQUNJLFNBQVM7TUFDVCxzQkFBc0I7RUFDMUI7O0VBRUE7TUFDSSxVQUFVO0VBQ2Q7O0VBRUE7TUFDSSxvQkFBb0I7RUFDeEI7O0VBRUE7TUFDSSxXQUFXO0VBQ2Y7O0VBRUE7TUFDSSxpQkFBaUI7RUFDckI7O0VBRUE7TUFDSSxXQUFXO01BQ1gsYUFBYTtFQUNqQjs7RUFFQTs7TUFFSSxXQUFXO01BQ1gsWUFBWTtFQUNoQjs7RUFFQTtNQUNJLFlBQVk7TUFDWixnQkFBZ0I7RUFDcEI7O0VBRUE7TUFDSSxrQ0FBa0M7TUFDbEMsa0JBQWtCO01BQ2xCLFlBQVk7RUFDaEI7O0VBRUE7TUFDSSxZQUFZO0VBQ2hCOztFQUVBO01BQ0ksd0JBQXdCO01BQ3hCLCtCQUErQjtFQUNuQzs7RUFFQTtNQUNJLGtDQUFrQztFQUN0Qzs7RUFFQTtNQUNJLFlBQVk7RUFDaEI7O0VBRUE7TUFDSSxvQ0FBb0M7TUFDcEMsZUFBZTtFQUNuQjs7RUFFQTs7OztNQUlJLFlBQVk7TUFDWix1QkFBdUI7RUFDM0I7O0VBRUE7TUFDSSxrQkFBa0I7RUFDdEI7O0VBRUE7TUFDSSxpQkFBaUI7TUFDakIsc0JBQXNCO01BQ3RCLDJCQUEyQjtNQUMzQixnQkFBZ0I7RUFDcEI7O0VBRUE7TUFDSSxlQUFlO01BQ2YsZ0JBQWdCO01BQ2hCLGdCQUFnQjtNQUNoQjtFQUNKOztFQUVBO01BQ0ksZ0JBQWdCO0VBQ3BCOztFQUVBO01BQ0ksa0NBQWtDO01BQ2xDLGtCQUFrQjtNQUNsQixnQkFBZ0I7RUFDcEI7O0VBRUE7O01BRUksbUNBQW1DO01BQ25DLFlBQVk7TUFDWixpQkFBaUI7TUFDakIsU0FBUztNQUNULFdBQVc7TUFDWCxpQkFBaUI7RUFDckI7O0VBRUE7TUFDSSxjQUFjO0VBQ2xCOztFQUVBO01BQ0ksZUFBZTtNQUNmLG1CQUFtQjtNQUNuQixjQUFjO0VBQ2xCOztFQUVBO01BQ0ksZUFBZTtFQUNuQjs7RUFFQTtNQUNJLFdBQVc7TUFDWCxZQUFZO0VBQ2hCOztFQUVBO01BQ0ksZ0JBQWdCO01BQ2hCLGtCQUFrQjtNQUNsQix5Q0FBeUM7TUFDekMsdUJBQXVCO01BQ3ZCLGtCQUFrQjtFQUN0Qjs7RUFFQTtNQUNJLGdCQUFnQjtNQUNoQixhQUFhO01BQ2IsZUFBZTtFQUNuQjs7RUFFQTtNQUNJLHVCQUF1QjtFQUMzQjs7RUFFQTtNQUNJLFlBQVk7RUFDaEI7O0VBRUE7TUFDSTtVQUNJLGtCQUFrQjtVQUNsQixlQUFlO01BQ25CO01BQ0E7O1VBRUksY0FBYztNQUNsQjtNQUNBO1VBQ0ksZUFBZTtNQUNuQjtNQUNBO1VBQ0ksV0FBVztVQUNYLFlBQVk7TUFDaEI7RUFDSjs7RUFFQTtNQUNJLGFBQWE7TUFDYixZQUFZO0VBQ2hCOztFQUVBO01BQ0ksOEJBQThCO01BQzlCLGNBQWM7RUFDbEI7O0VBRUE7TUFDSSxlQUFlO01BQ2YsZ0JBQWdCO01BQ2hCLGVBQWU7RUFDbkI7O0VBRUE7TUFDSSxxQkFBcUI7TUFDckIsdUJBQXVCO01BQ3ZCLGdCQUFnQjtFQUNwQjs7RUFFQTtNQUNJO1VBQ0ksZUFBZTtNQUNuQjtFQUNKOztFQUVBO01BQ0k7VUFDSSxrQkFBa0I7VUFDbEIsZUFBZTtNQUNuQjtNQUNBO1VBQ0ksZUFBZTtNQUNuQjtNQUNBO1VBQ0ksZUFBZTtNQUNuQjtNQUNBO1VBQ0ksZUFBZTtNQUNuQjtNQUNBO1VBQ0ksa0JBQWtCO1VBQ2xCLGFBQWE7VUFDYixZQUFZO01BQ2hCO01BQ0E7VUFDSSxrQkFBa0I7VUFDbEIsZUFBZTtVQUNmLGVBQWU7TUFDbkI7RUFDSiIsImZpbGUiOiJob21lLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIgICoge1xyXG4gICAgICBtYXJnaW46IDA7XHJcbiAgICAgIGJveC1zaXppbmc6IGJvcmRlci1ib3g7XHJcbiAgfVxyXG4gIFxyXG4gIC5jb250YWluZXItZmx1aWQge1xyXG4gICAgICBwYWRkaW5nOiAwO1xyXG4gIH1cclxuICBcclxuICAubmF2YmFyLWJyYW5kIHtcclxuICAgICAgZGlzcGxheTogaW5saW5lLWZsZXg7XHJcbiAgfVxyXG4gIFxyXG4gIC5uYXZiYXIge1xyXG4gICAgICB3aWR0aDogMTAwJTtcclxuICB9XHJcbiAgXHJcbiAgLm5hdmJhci1uYXYge1xyXG4gICAgICBtYXJnaW4tbGVmdDogYXV0bztcclxuICB9XHJcbiAgXHJcbiAgI3NsaWRlcyB7XHJcbiAgICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgICBoZWlnaHQ6IDQ1MHB4O1xyXG4gIH1cclxuICBcclxuICAuY2Fyb3VzZWwtaW5uZXIsXHJcbiAgLmNhcm91c2VsLWl0ZW0ge1xyXG4gICAgICB3aWR0aDogMTAwJTtcclxuICAgICAgaGVpZ2h0OiAxMDAlO1xyXG4gIH1cclxuICBcclxuICAubmF2LWxpbmsge1xyXG4gICAgICBjb2xvcjogYmxhY2s7XHJcbiAgICAgIGZvbnQtd2VpZ2h0OiAyMDA7XHJcbiAgfVxyXG4gIFxyXG4gIC5uYXYtbGluazpob3ZlciB7XHJcbiAgICAgIGJhY2tncm91bmQtY29sb3I6IHJnYig5NCwgMTYwLCA5NCk7XHJcbiAgICAgIGJvcmRlci1yYWRpdXM6IDVweDtcclxuICAgICAgY29sb3I6IHdoaXRlO1xyXG4gIH1cclxuICBcclxuICAubmF2LWl0ZW0ge1xyXG4gICAgICBmbG9hdDogcmlnaHQ7XHJcbiAgfVxyXG4gIFxyXG4gIC5uYXZiYXIgLm5hdmJhci10b2dnbGVyIHtcclxuICAgICAgY29sb3I6IHJnYmEoMCwgMCwgMCwgLjUpO1xyXG4gICAgICBib3JkZXItY29sb3I6IHJnYmEoMCwgMCwgMCwgLjEpO1xyXG4gIH1cclxuICBcclxuICAubmF2YmFyIGJ1dHRvbiB7XHJcbiAgICAgIGJhY2tncm91bmQtY29sb3I6IHJnYig5NCwgMTYwLCA5NCk7XHJcbiAgfVxyXG4gIFxyXG4gIC5uYXZiYXItdG9nZ2xlci1pY29uIHtcclxuICAgICAgY29sb3I6IHdoaXRlO1xyXG4gIH1cclxuICBcclxuICAuaGVhZGVyLXRvcCB7XHJcbiAgICAgIGJhY2tncm91bmQtY29sb3I6IHJnYigxNjgsIDE2NiwgMTY2KTtcclxuICAgICAgcGFkZGluZzogMTBweCAwO1xyXG4gIH1cclxuICBcclxuICAuY29sLWxnLTMgcCBzcGFuLFxyXG4gIC5jb2wtbGctOSBwIHNwYW4sXHJcbiAgLmNvbC1tZC03IHAgc3BhbixcclxuICAuY29sLW1kLTUgcCBzcGFuIHtcclxuICAgICAgY29sb3I6IHdoaXRlO1xyXG4gICAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcclxuICB9XHJcbiAgXHJcbiAgc3BhbiB7XHJcbiAgICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICB9XHJcbiAgXHJcbiAgLmNhcm91c2VsLWl0ZW0ge1xyXG4gICAgICBtaW4taGVpZ2h0OiA0NTBweDtcclxuICAgICAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcclxuICAgICAgYmFja2dyb3VuZC1wb3NpdGlvbjogY2VudGVyO1xyXG4gICAgICBwYWRkaW5nOiAxMCUgMTAlO1xyXG4gIH1cclxuICBcclxuICAuY2Fyb3VzZWwtaXRlbSBoMiB7XHJcbiAgICAgIGZvbnQtc2l6ZTogMzZweDtcclxuICAgICAgbWFyZ2luOiAwIDAgMjBweDtcclxuICAgICAgZm9udC13ZWlnaHQ6IDQwMDtcclxuICAgICAgZm9udC1mYW1pbHk6ICdMdWNpZGEgU2FucycsICdMdWNpZGEgU2FucyBSZWd1bGFyJywgJ0x1Y2lkYSBHcmFuZGUnLCAnTHVjaWRhIFNhbnMgVW5pY29kZScsIEdlbmV2YSwgVmVyZGFuYSwgc2Fucy1zZXJpZlxyXG4gIH1cclxuICBcclxuICAuY2Fyb3VzZWwtaXRlbSBoMiBzcGFuIHtcclxuICAgICAgZm9udC13ZWlnaHQ6IDgwMDtcclxuICB9XHJcbiAgXHJcbiAgLmZhLXBsdXMge1xyXG4gICAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMjI4LCA1NywgNTcpO1xyXG4gICAgICBib3JkZXItcmFkaXVzOiAzcHg7XHJcbiAgICAgIG1hcmdpbi1sZWZ0OiA1cHg7XHJcbiAgfVxyXG4gIFxyXG4gIC5jYXJvdXNlbC1jb250cm9sLW5leHQsXHJcbiAgLmNhcm91c2VsLWNvbnRyb2wtcHJldiB7XHJcbiAgICAgIGJhY2tncm91bmQtY29sb3I6IHJnYigxMDEsIDE3MiwgOTQpO1xyXG4gICAgICBib3JkZXI6IG5vbmU7XHJcbiAgICAgIGJvcmRlci1yYWRpdXM6IDUlO1xyXG4gICAgICB3aWR0aDogNSU7XHJcbiAgICAgIGhlaWdodDogMTAlO1xyXG4gICAgICBtYXJnaW46IGF1dG8gMTBweDtcclxuICB9XHJcbiAgXHJcbiAgbWFpbiAuY29udGFpbmVyIHtcclxuICAgICAgbWFyZ2luOiAwIGF1dG87XHJcbiAgfVxyXG4gIFxyXG4gIC5pdGVtIHtcclxuICAgICAgZm9udC1zaXplOiAxNXB4O1xyXG4gICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG4gICAgICBtYXJnaW46IDAgYXV0bztcclxuICB9XHJcbiAgXHJcbiAgLnRpbWVzIHtcclxuICAgICAgZm9udC1zaXplOiAyNXB4O1xyXG4gIH1cclxuICBcclxuICAuY29sLW1kLTEgaW1nIHtcclxuICAgICAgd2lkdGg6IDYwcHg7XHJcbiAgICAgIGhlaWdodDogNjBweDtcclxuICB9XHJcbiAgXHJcbiAgLnAtNSBoMSB7XHJcbiAgICAgIGZvbnQtd2VpZ2h0OiA0MDA7XHJcbiAgICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICAgICAgZm9udC1mYW1pbHk6IEFyaWFsLCBIZWx2ZXRpY2EsIHNhbnMtc2VyaWY7XHJcbiAgICAgIGNvbG9yOiByZ2IoOTgsIDE1MSwgOTgpO1xyXG4gICAgICBmb250LXN0eWxlOiBpdGFsaWM7XHJcbiAgfVxyXG4gIFxyXG4gIGgxIHtcclxuICAgICAgZm9udC13ZWlnaHQ6IDgwMDtcclxuICAgICAgcGFkZGluZzogMjBweDtcclxuICAgICAgbWFyZ2luLXRvcDogNXB4O1xyXG4gIH1cclxuICBcclxuICAuc2VydmljZSBoMSB7XHJcbiAgICAgIGNvbG9yOiByZ2IoOTgsIDE1MSwgOTgpO1xyXG4gIH1cclxuICBcclxuICAuY29sbGFwc2Uge1xyXG4gICAgICBmbG9hdDogcmlnaHQ7XHJcbiAgfVxyXG4gIFxyXG4gIEBtZWRpYShNYXgtd2lkdGg6OTkwcHgpIHtcclxuICAgICAgcCB7XHJcbiAgICAgICAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgICAgICAgICBmb250LXNpemU6IDE1cHg7XHJcbiAgICAgIH1cclxuICAgICAgLmNvbC1tZC03LFxyXG4gICAgICAuY29sLW1kLTUge1xyXG4gICAgICAgICAgbWFyZ2luOiAwIGF1dG87XHJcbiAgICAgIH1cclxuICAgICAgLmNhcm91c2VsLWl0ZW0ge1xyXG4gICAgICAgICAgcGFkZGluZzogMjAlIDUlO1xyXG4gICAgICB9XHJcbiAgICAgIC5jb2wtbWQtMSBpbWcge1xyXG4gICAgICAgICAgd2lkdGg6IDMwcHg7XHJcbiAgICAgICAgICBoZWlnaHQ6IDMwcHg7XHJcbiAgICAgIH1cclxuICB9XHJcbiAgXHJcbiAgLmJsb2NrLWNvbnRlbnQge1xyXG4gICAgICBwYWRkaW5nOiAxMHB4O1xyXG4gICAgICBtYXJnaW46IDEwcHg7XHJcbiAgfVxyXG4gIFxyXG4gIC5ibG9jay1jb250ZW50IGgyIHtcclxuICAgICAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkIGdyZWVuO1xyXG4gICAgICBwYWRkaW5nOiA1cHggMDtcclxuICB9XHJcbiAgXHJcbiAgLmJsb2NrLWNvbnRlbnQgcCB7XHJcbiAgICAgIGZvbnQtc2l6ZTogMjBweDtcclxuICAgICAgdGV4dC1hbGlnbjogbGVmdDtcclxuICAgICAgcGFkZGluZzogMTBweCAwO1xyXG4gIH1cclxuICBcclxuICAuYmxvY2stY29udGVudCBwIGEge1xyXG4gICAgICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XHJcbiAgICAgIGNvbG9yOiByZ2IoMzAsIDEyMiwgOTIpO1xyXG4gICAgICBmb250LXdlaWdodDogNjAwO1xyXG4gIH1cclxuICBcclxuICBAbWVkaWEgKG1pbi13aWR0aDo5OTJweClhbmQgKG1heC13aWR0aDogMTExNXB4KSB7XHJcbiAgICAgIHAge1xyXG4gICAgICAgICAgZm9udC1zaXplOiAxM3B4O1xyXG4gICAgICB9XHJcbiAgfVxyXG4gIFxyXG4gIEBtZWRpYSAobWF4LXdpZHRoOjc3N3B4KSB7XHJcbiAgICAgIHAge1xyXG4gICAgICAgICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gICAgICAgICAgZm9udC1zaXplOiAxMHB4O1xyXG4gICAgICB9XHJcbiAgICAgIC5jYXJvdXNlbC1pdGVtIHtcclxuICAgICAgICAgIHBhZGRpbmc6IDMwJSA1JTtcclxuICAgICAgfVxyXG4gICAgICAuaXRlbSB7XHJcbiAgICAgICAgICBwYWRkaW5nOiAxMHB4IDA7XHJcbiAgICAgIH1cclxuICAgICAgLml0ZW0gcCB7XHJcbiAgICAgICAgICBmb250LXNpemU6IDE1cHg7XHJcbiAgICAgIH1cclxuICAgICAgLmJsb2NrLWNvbnRlbnQge1xyXG4gICAgICAgICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gICAgICAgICAgcGFkZGluZzogMTBweDtcclxuICAgICAgICAgIG1hcmdpbjogMTBweDtcclxuICAgICAgfVxyXG4gICAgICAuYmxvY2stY29udGVudCBwIHtcclxuICAgICAgICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICAgICAgICAgIGZvbnQtc2l6ZTogMjBweDtcclxuICAgICAgICAgIHBhZGRpbmc6IDEwcHggMDtcclxuICAgICAgfVxyXG4gIH0iXX0= */</style></head>
+
+<body>
+    <app-root height="100%" width="100%" _nghost-olk-c29="" ng-version="13.2.3"><router-outlet _ngcontent-olk-c29=""></router-outlet><app-home _nghost-olk-c27=""><div _ngcontent-olk-c27="" class="container-fluid"><div _ngcontent-olk-c27="" class="header-top"><div _ngcontent-olk-c27="" class="row justify-content-between"><div _ngcontent-olk-c27="" class="col-lg-3 col-md-5 align-self-center"><p _ngcontent-olk-c27="">Welcome to university hospital</p></div><div _ngcontent-olk-c27="" class="col-lg-4 col-md-7 text-center align-self-end"><p _ngcontent-olk-c27="">Opening Hours : <span _ngcontent-olk-c27="">Monday to Saturday - 8am to 9pm</span></p></div></div></div><header _ngcontent-olk-c27=""><nav _ngcontent-olk-c27="" class="navbar navbar-expand-lg"><div _ngcontent-olk-c27="" class="navbar-brand"><img _ngcontent-olk-c27="" width="30" height="30" src="./Hospital_files/logo.jpeg" alt="logo" class="d-flex"><h5 _ngcontent-olk-c27="">&nbsp;&nbsp;&nbsp;hospital university</h5></div><button _ngcontent-olk-c27="" data-target="#navigation" data-toggle="collapse" class="btn-success navbar-toggler"><span _ngcontent-olk-c27="" class="fas fa-bars"></span></button><div _ngcontent-olk-c27="" id="navigation" class="collapse navbar-collapse" ng-reflect-ng-class="[object Object]"><ul _ngcontent-olk-c27="" class="navbar-nav ml-auto"><li _ngcontent-olk-c27="" class="nav-item"><a _ngcontent-olk-c27="" href="http://localhost:4200/#" class="nav-link">Home</a></li><li _ngcontent-olk-c27="" class="nav-item"><a _ngcontent-olk-c27="" href="http://localhost:4200/" class="nav-link">Doctors</a></li><li _ngcontent-olk-c27="" class="nav-item"><a _ngcontent-olk-c27="" href="http://localhost:4200/" class="nav-link">Clinic</a></li><li _ngcontent-olk-c27="" class="nav-item"><a _ngcontent-olk-c27="" href="http://localhost:4200/" class="nav-link">Services</a></li><li _ngcontent-olk-c27="" class="nav-item"><a _ngcontent-olk-c27="" href="http://localhost:4200/#" class="nav-link">Appointment</a></li><li _ngcontent-olk-c27="" class="nav-item"><a _ngcontent-olk-c27="" routerlink="/login" class="nav-link" ng-reflect-router-link="/login" href="http://localhost:4200/login">Log in</a></li></ul></div></nav></header><main _ngcontent-olk-c27=""><div _ngcontent-olk-c27="" id="slides" data-ride="carousel" class="carousel slide"><ol _ngcontent-olk-c27="" class="carousel-indicators"><li _ngcontent-olk-c27="" data-bs-target="#slides" data-bs-slide-to="0" class="active"></li><li _ngcontent-olk-c27="" data-bs-target="#slides" data-bs-slide-to="1"></li><li _ngcontent-olk-c27="" data-bs-target="#slides" data-bs-slide-to="2"></li></ol><div _ngcontent-olk-c27="" class="carousel-inner"><div _ngcontent-olk-c27="" class="carousel-item active" style="background-image: url(&#39;assets/slide-two.jpg&#39;);"><h2 _ngcontent-olk-c27=""> We <span _ngcontent-olk-c27="">Care</span> for <span _ngcontent-olk-c27="">you</span><span _ngcontent-olk-c27="" class="fa fa-plus"></span></h2></div><div _ngcontent-olk-c27="" class="carousel-item" style="background-image: url(&#39;assets/slide-one.jpg&#39;);"><h2 _ngcontent-olk-c27="">Medical Services<br _ngcontent-olk-c27=""><span _ngcontent-olk-c27="">That You Can Trust</span><span _ngcontent-olk-c27="" class="fa fa-plus"></span></h2></div><div _ngcontent-olk-c27="" class="carousel-item" style="background-image: url(&#39;assets/slide-three.jpg&#39;);"><h2 _ngcontent-olk-c27="">Qualified Staff<br _ngcontent-olk-c27=""><span _ngcontent-olk-c27="">With Expertise<br _ngcontent-olk-c27="">in Services We Offer</span><span _ngcontent-olk-c27="" class="fa fa-plus"></span></h2></div><button _ngcontent-olk-c27="" data-bs-slide="next" data-bs-target="#slides" class="carousel-control-next"><span _ngcontent-olk-c27="" class="fa-solid fa-arrow-right"></span></button><button _ngcontent-olk-c27="" data-bs-slide="prev" data-bs-target="#slides" class="carousel-control-prev"><span _ngcontent-olk-c27="" class="fa-solid fa-arrow-left"></span></button></div></div><div _ngcontent-olk-c27="" class="container mx-auto"><div _ngcontent-olk-c27=""><h1 _ngcontent-olk-c27="" style="text-align: center; color: #1f456e;">&nbsp;Specialities</h1><p _ngcontent-olk-c27="" style="color: #1f456e; text-align: center;"><strong _ngcontent-olk-c27="">university hospital is a tertiary care, <br _ngcontent-olk-c27=""> private hospital with a multidisciplinary approach, <br _ngcontent-olk-c27=""> integrating medical services with cutting edge technology, <br _ngcontent-olk-c27=""> covering more than 30 specialities at the outpatient centre. </strong></p><h1 _ngcontent-olk-c27="" style="text-align: center; color: #1f456e;">Other Specialties</h1></div><div _ngcontent-olk-c27="" class="row text-center"><div _ngcontent-olk-c27="" class="col-lg-3 col-md-6 col-sm-12"><img _ngcontent-olk-c27="" src="./Hospital_files/Pediatrics.png" width="150px " height="150px "><h6 _ngcontent-olk-c27="">Pediatrics</h6></div><div _ngcontent-olk-c27="" class="col-lg-3 col-md-6 col-sm-12"><img _ngcontent-olk-c27="" src="./Hospital_files/Rheumatology.png" width="150px " height="150px "><h6 _ngcontent-olk-c27="">Rheumatology</h6></div><div _ngcontent-olk-c27="" class="col-lg-3 col-md-6 col-sm-12"><img _ngcontent-olk-c27="" src="./Hospital_files/General+Surgery.png" width="150px " height="150px "><h6 _ngcontent-olk-c27="">General Surgery</h6></div><div _ngcontent-olk-c27="" class="col-lg-3 col-md-6 col-sm-12"><img _ngcontent-olk-c27="" src="./Hospital_files/Vascular+Surgery.png" width="150px " height="150px "><h6 _ngcontent-olk-c27="">Vascular Surgery</h6></div></div><div _ngcontent-olk-c27="" class="row text-center"><div _ngcontent-olk-c27="" class="col-lg-3 col-md-6 col-sm-12"><img _ngcontent-olk-c27="" src="./Hospital_files/Internal+Medicine.png" width="150px " height="150px "><h6 _ngcontent-olk-c27="">Internal Medicine</h6></div><div _ngcontent-olk-c27="" class="col-lg-3 col-md-6 col-sm-12"><img _ngcontent-olk-c27="" src="./Hospital_files/Plastic+Surgery.png" width="150px " height="150px "><h6 _ngcontent-olk-c27="">Plastic Surgery</h6></div><div _ngcontent-olk-c27="" class="col-lg-3 col-md-6 col-sm-12"><img _ngcontent-olk-c27="" src="./Hospital_files/Dermatology.png" width="150px " height="150px "><h6 _ngcontent-olk-c27="">Dermatology</h6></div><div _ngcontent-olk-c27="" class="col-lg-3 col-md-6 col-sm-12"><img _ngcontent-olk-c27="" src="./Hospital_files/blood_diseases.png" width="150px " height="150px "><h6 _ngcontent-olk-c27="">blood diseases</h6></div></div><div _ngcontent-olk-c27="" class="row text-center"><div _ngcontent-olk-c27="" class="col-lg-3 col-md-6 col-sm-12"><img _ngcontent-olk-c27="" src="./Hospital_files/Ear+Nose+Throat+(ENT).png" width="150px " height="150px "><h6 _ngcontent-olk-c27="">Ear and Nose and Throat</h6></div><div _ngcontent-olk-c27="" class="col-lg-3 col-md-6 col-sm-12"><img _ngcontent-olk-c27="" src="./Hospital_files/breast+Health.png" width="150px " height="150px "><h6 _ngcontent-olk-c27="">breast Health</h6></div><div _ngcontent-olk-c27="" class="col-lg-3 col-md-6 col-sm-12"><img _ngcontent-olk-c27="" src="./Hospital_files/Nuclear+Medicine+Department.png" width="150px " height="150px "><h6 _ngcontent-olk-c27="">Nuclear and Medicine+Department</h6></div><div _ngcontent-olk-c27="" class="col-lg-3 col-md-6 col-sm-12"><img _ngcontent-olk-c27="" src="./Hospital_files/Ophthalmology.png" width="150px " height="150px "><h6 _ngcontent-olk-c27="">Ophthalmology</h6></div></div></div><section _ngcontent-olk-c27="" class="container pb-5 pt-3 service"><div _ngcontent-olk-c27="" class="row"><div _ngcontent-olk-c27="" class="col-sm-4 text-center mx-auto"><h1 _ngcontent-olk-c27=""> our services </h1></div></div><div _ngcontent-olk-c27="" class="row pt-4"><div _ngcontent-olk-c27="" class="col-lg-5 col-sm-6 text-center item"><span _ngcontent-olk-c27="" class="fa-solid fa-user-doctor fa-2x p-3" style="color: rgb(72, 139, 72);"></span><h4 _ngcontent-olk-c27="">Qualified Doctors</h4><p _ngcontent-olk-c27=""> We have doctors who are qualified in medicine and treat patients at highest level</p></div><div _ngcontent-olk-c27="" class="col-lg-5 col-sm-6 text-center item"><span _ngcontent-olk-c27="" class="fa-solid fa-suitcase-medical fa-2x p-3" style="color: rgb(72, 139, 72);"></span><h4 _ngcontent-olk-c27="">Medical Counseling</h4><p _ngcontent-olk-c27=""> We provide leading and distinguished physical therapy, hand therapy and rehabilitation to help our patients recover</p></div></div><div _ngcontent-olk-c27="" class="row pt-4"><div _ngcontent-olk-c27="" class="col-lg-5 col-sm-6 text-center item"><span _ngcontent-olk-c27="" class="fa-solid fa-square-plus fa-2x p-3" style="color: rgb(72, 139, 72);"></span><h4 _ngcontent-olk-c27="">Rehabilitation Center</h4><p _ngcontent-olk-c27=""> We provide leading and distinguished physical therapy, hand therapy and rehabilitation to help our patients recover</p></div><div _ngcontent-olk-c27="" class="col-lg-5 col-sm-6 text-center item"><span _ngcontent-olk-c27="" class="fa-solid fa-truck-medical fa-2x p-3" style="color: rgb(72, 139, 72);"></span><h4 _ngcontent-olk-c27="">Emergency Services</h4><p _ngcontent-olk-c27=""> We provide leading and distinguished physical therapy, hand therapy and rehabilitation to help our patients recover</p></div></div></section><section _ngcontent-olk-c27="" class="p-5" style="background-color: rgb(241, 233, 233);"><h1 _ngcontent-olk-c27="">Outpatient appointments</h1><div _ngcontent-olk-c27="" class="row pb-4 pt-2"><div _ngcontent-olk-c27="" class="col-sm-2 col-md-1"><img _ngcontent-olk-c27="" src="./Hospital_files/neurlogy logo.png"></div><div _ngcontent-olk-c27="" class="col-sm-3 col-md-5 align-self-center"><h5 _ngcontent-olk-c27="">neurology Clinic</h5></div></div><div _ngcontent-olk-c27="" class="row mx-auto"><div _ngcontent-olk-c27="" class="col-md-6 col-lg-3 text-center"><img _ngcontent-olk-c27="" src="./Hospital_files/doctor.jpg" class="rounded-circle"><br _ngcontent-olk-c27=""><h5 _ngcontent-olk-c27="">DR/</h5><h5 _ngcontent-olk-c27="">day</h5><p _ngcontent-olk-c27=""></p></div><div _ngcontent-olk-c27="" class="col-md-6 col-lg-3 text-center"><img _ngcontent-olk-c27="" src="./Hospital_files/doctor.jpg" class="rounded-circle"><br _ngcontent-olk-c27=""><h5 _ngcontent-olk-c27="">DR/</h5><h5 _ngcontent-olk-c27="">day</h5><p _ngcontent-olk-c27=""></p></div><div _ngcontent-olk-c27="" class="col-md-6 col-lg-3 text-center"><img _ngcontent-olk-c27="" src="./Hospital_files/doctor.jpg" class="rounded-circle"><br _ngcontent-olk-c27=""><h5 _ngcontent-olk-c27="">DR/</h5><h5 _ngcontent-olk-c27="">day</h5><p _ngcontent-olk-c27=""></p></div><div _ngcontent-olk-c27="" class="col-md-6 col-lg-3 text-center"><img _ngcontent-olk-c27="" src="./Hospital_files/doctor.jpg" class="rounded-circle"><br _ngcontent-olk-c27=""><h5 _ngcontent-olk-c27="">DR/</h5><h5 _ngcontent-olk-c27="">day</h5><p _ngcontent-olk-c27=""></p></div></div></section></main><footer _ngcontent-olk-c27="" class="row"><div _ngcontent-olk-c27="" class="col-md-4 col-sm-12"><div _ngcontent-olk-c27="" class="block-content"><h2 _ngcontent-olk-c27="">Learn More</h2><p _ngcontent-olk-c27=""><a _ngcontent-olk-c27="" href="https://www.fayoum.edu.eg/hospital/AboutCollegePage5.aspx#" target="_blank ">About US</a></p><p _ngcontent-olk-c27=""><a _ngcontent-olk-c27="" href="http://localhost:4200/">Services</a></p></div></div><div _ngcontent-olk-c27="" class="col-md-8 col-sm-12"><div _ngcontent-olk-c27="" class="row"><div _ngcontent-olk-c27="" class="col-sm-12 col-md-4 block-content"><h2 _ngcontent-olk-c27="">Contact Us</h2><p _ngcontent-olk-c27=""><a _ngcontent-olk-c27="" href="http://localhost:4200/"><i _ngcontent-olk-c27="" class="fa-solid fa-envelope"></i>&nbsp;&nbsp;Contact Us</a></p><p _ngcontent-olk-c27=""><a _ngcontent-olk-c27="" href="https://www.google.com/maps/place/%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89+%D8%A7%D9%84%D9%81%D9%8A%D9%88%D9%85+%D8%A7%D9%84%D8%AC%D8%A7%D9%85%D8%B9%D9%8A%E2%80%AD/@29.3213102,30.8340012,15z/data=!4m5!3m4!1s0x0:0xd407b2fa8d2ebe74!8m2!3d29.3213102!4d30.8340012" target="_blank "><i _ngcontent-olk-c27="" class="fa-solid fa-location-dot"></i>&nbsp;&nbsp; Our Location</a></p></div><div _ngcontent-olk-c27="" class="col-sm-12 col-md-4 block-content"><span _ngcontent-olk-c27="" class="fa-solid fa-phone"><img _ngcontent-olk-c27="" src="./Hospital_files/contact.png" width="200px " height="100px "></span></div></div></div></footer></div></app-home><!--container--></app-root>
+
+<script src="./Hospital_files/runtime.js.download" type="module"></script><script src="./Hospital_files/polyfills.js.download" type="module"></script><script src="./Hospital_files/styles.js.download" defer=""></script><script src="./Hospital_files/scripts.js.download" defer=""></script><script src="./Hospital_files/vendor.js.download" type="module"></script><script src="./Hospital_files/main.js.download" type="module"></script>
+
+</body></html>
