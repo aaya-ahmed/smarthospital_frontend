@@ -1,0 +1,90 @@
+<div class="mask d-flex align-items-center h-100 gradient-custom-3  appoinment" style="background-image: url('assets/appointment.jpg');">
+    <div class="container h-100 ">
+        <div class="row d-flex  align-items-center h-100">
+            <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                <div class="card" style="border-radius: 15px;">
+                    <div class="card-body p-5">
+                        <h2 class=" text-center mb-5  book">Book an Appoinment</h2>
+
+                        <form action=" " method="post">
+                            <div class="form-group">
+                                <label for="uname">Enter Your Full Name:</label>
+                                <input type="text" class="form-control" id="uname" placeholder="Enter Your Name" name="uname" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email"> Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter your email" name="email">
+                            </div>
+
+                            <div class="row form-group">
+                                <div class="col">
+                                    <label for="nationalId">National Id:</label>
+                                    <input type="text" id="nationalId" name="nationalId" pattern="\d*" class="form-control" placeholder="enter your id" minlength="14" maxlength="14" required/>
+                                </div>
+                                <div class="col">
+
+                                    <label for="phone">Phone Number:</label>
+                                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="01xxxxxxxxx" required maxlength="11" minlength="11">
+                                </div>
+                            </div>
+
+                            <div class=" form-group">
+
+                                <label for="dept">Departement:</label>
+                                <input type="text" class="form-control" name="example" id="dept" list="departement" placeholder="choose departement">
+                                <datalist id="departement" required>
+                        <option value=" Gastro-Intestinal (GIT) | الجهاز الهضمي">
+                        <option value="Urology | جراحة المسالك البولية"> 
+                        <option value=" Cardiothoracic Surgery | جراحة القلب والصدر">
+                        <option value=" Dermatology | الجلدية"> 
+                        <option value="Ear, Nose & Throat | أنف وأذن وحنجرة">
+                        <option value=" General Surgery | الجراحة العامة"> 
+                        <option value="Gynecology & Obstetrics | أمراض النساء والتوليد">
+                        <option value="Orthopedic Surgery | جراحة العظام"> 
+                        <option value="Kidney Diseases | أمراض الكلى"> 
+                        <option value="Orthopedics Pediatrics | طب الأطفال"> 
+                        <option value="Ophthalmology | طب العيون">
+                        <option value=" Internal Medicine | الطب الباطني"> 
+                      </datalist>
+                            </div>
+                            <div class="form-outline">
+                                <label for="address"> Adress</label>
+                                <input type="text" class="form-control" id="address" placeholder="Enter your address" name="address">
+                            </div>
+
+                            <div class=" form-group">
+
+                                <label for="doctor">Doctor:</label>
+                                <input type="text" class="form-control" name="example" id="doctor" list="doc" placeholder="choose your favourite doctor">
+                                <datalist id="doc" required>
+                    <option value=" Amira Eid ">
+                    <option value="Aya Ahmed"> 
+                    <option value=" Aya Medhat">
+                    <option value=" Mai Ali"> 
+                     </datalist>
+                            </div>
+                            <div class=" form-group">
+                                <label for="time">Select Appoinment time:</label>
+                                <select class="form-control" id="time" required>
+                          <option >Select Appoinment time slot :</option>
+                          <option value="1">9:00 AM - 9:30 AM</option>
+                          <option value="2">9:30 AM - 10:00 AM</option>
+                          <option value="3">10:00 AM - 10:30 AM</option>
+                          <option value="4">10:30 AM - 11:00 AM</option>
+                          <option value="5">11:00 AM - 11:30 AM</option>
+                          <option value="4">11:30 AM - 12:00 PM </option>
+                        </select>
+
+                            </div>
+                            <br>
+                            <div class="d-flex justify-content-center">
+                                <button type="button" class="btn   btn-lg gradient-custom-4 ">submit</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

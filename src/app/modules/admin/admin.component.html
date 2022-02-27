@@ -1,0 +1,65 @@
+<div class="d-flex" id="wrapper">
+    <div class="bg-white " id="sidebar-wrapper">
+        <div class="sidebar-heading text-center py-3 primary-text fs-2 fw-bold text-uppercase">
+            <h6 class="align-self-center"><span class="fa-solid fa-hospital"></span><span>&nbsp;University Hospital</span></h6>
+        </div>
+        <div class="list-group list-group-flush my-3 ">
+            <a class="list-group-item list-group-item-action  second-text " [routerLink]="'dashboard'" (click)="namecomponent('dashboard')">
+                <span class="fa-solid fa-gauge "></span><span>&nbsp;&nbsp;Dashboard</span>
+            </a>
+            <a class="list-group-item list-group-item-action  second-text  fw-bold" [routerLink]="'doctor'" (click)="namecomponent('doctor')">
+                <span class="fa-solid fa-user-doctor "></span><span>&nbsp;&nbsp;Doctors</span>
+            </a>
+            <a class="list-group-item list-group-item-action  second-text  fw-bold" [routerLink]="'nurse'" (click)="namecomponent('nurse')">
+                <span class="fa-solid fa-user-nurse "></span><span>&nbsp;&nbsp;Nurses</span>
+            </a>
+            <a class="list-group-item list-group-item-action  second-text  fw-bold" [routerLink]="'patients'" (click)="namecomponent('patients')">
+                <span class="fa-solid fa-bed-pulse "></span><span>&nbsp;&nbsp;Patients</span>
+            </a>
+            <a class="list-group-item list-group-item-action  second-text  fw-bold" [routerLink]="'staff'" (click)="namecomponent('staff')">
+                <span class="fa-solid fa-x-ray "></span><span>&nbsp;&nbsp;Staff Members</span>
+            </a>
+            <a class="list-group-item list-group-item-action  second-text  fw-bold" [routerLink]="'report'" (click)="namecomponent('report')">
+                <span class="fa fa-file " aria-hidden="true"></span><span>&nbsp;&nbsp;Reports</span>
+            </a>
+            <a class="list-group-item list-group-item-action  text-danger  fw-bold" [routerLink]="''">
+                <span class="fa-solid fa-arrow-right-from-bracket "></span><span>&nbsp;&nbsp;Log Out</span>
+            </a>
+        </div>
+    </div>
+
+    <div id="page-content-wrapper">
+        <nav class="navbar navbar-expand-lg navbar-light bg-transparent  py-lg-2 px-4">
+            <div class="d-flex align-items-center">
+                <span (click)=" togglebar()" class="fa-solid fa-grip-lines primary-text fs-4" id="menu-toggle"></span>
+                <h2 class="fs-2 m-0"> &nbsp;{{activecomponent}}</h2>
+            </div>
+            <button class="navbar-toggler" (click)="togglenavbar()" data-bs-toggle="collapse" data-target="#heading">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+            <div class="collapse navbar-collapse" id="heading" [ngClass]="{'show':navbartoggle}">
+                <ul class="navbar-nav  mb-2 mb-lg-0 ">
+                    <li class="nav-item dropdown ml-auto">
+                        <button (click)="toggledropdown()" style="color: white;" class="nav-link dropdown-toggle second-text fw-bold" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span>
+                                <img src='assets/admin.jpg' alt='admin photo' width="20px" height="20px" />
+                        </span> &nbsp;&nbsp; Ahmed</button>
+                        <ul class="dropdown-menu " labelledby="navbarDropdown" [ngClass]="{'show':dropdowntoggle}">
+                            <li class="dropdown-item">profile</li>
+                            <li class="dropdown-item">log out</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container-fluid">
+            <router-outlet></router-outlet>
+
+        </div>
+    </div>
+</div>
+
+<script src="./src/assets/animate.js "></script>
+<script src="node_modules/bootstrap/dist/jquery-3.6.0.min.js "></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js "></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js "></script>

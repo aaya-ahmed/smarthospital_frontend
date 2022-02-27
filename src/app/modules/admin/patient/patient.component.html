@@ -1,0 +1,163 @@
+<div class="container-fluid">
+    <div class="d-block p-3 head m-0">
+        <button type="button" class="btn btn-success" (click)=" openmodel()">Add Patient </button>
+    </div>
+    <div class="searching">
+        <input type="checkbox" id="check" />
+        <div class="d-flex">
+            <label for="check"><i class="fa-solid fa-magnifying-glass "></i> &nbsp; srearch for special doctor</label>
+            <div>
+                <button class="btn btn-success">All</button>
+            </div>
+        </div>
+        <div class="searching-fields">
+            <div class="row mx-auto justify-content-between py-3">
+                <div class="col-lg-3 col-md-6">
+                    <label for="id">ID</label>
+                    <input class="form-control" type="text" id="id" (blur)="setid($event)" disabled/>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <label for="name">Name</label>
+                    <input class="form-control" type="text" id="name" (blur)="setname($event)" disabled/>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <label for="patienttype">patient type</label>
+                    <select class="form-control" name="patienttype" id="patienttype" (change)="setpatenttype($event)">
+                      <option value=""></option>
+                      <option value="outpatient">outpatient</option>
+                    <option vale="inpatient">inpatient</option>
+                  </select>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <label for="bloodgroup">bloodgroup</label>
+                    <select class="form-control" name="bloodgroup" id="bloodgroup" (change)="setblood($event)">
+                    <option value=""></option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                  </select>
+                </div>
+            </div>
+            <div class="float-right">
+                <button class="btn btn-success" (click)="search() ">search</button>
+            </div>
+
+        </div>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-striped ">
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>National Id</th>
+                    <th>Patient Type</th>
+                    <th>blood type</th>
+                    <th>Age</th>
+                    <th>Phone</th>
+                    <th>Adress</th>
+                    <th>Options</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let i of patientlist; ">
+                    <td></td>
+                    <td>{{i.name}}</td>
+                    <td>{{i.id}}</td>
+                    <td>{{i.Patienttype}}</td>
+                    <td>{{i.bloodgroup}}</td>
+                    <td>{{i.age}}</td>
+                    <td>{{i.phone}}</td>
+                    <td>{{i.address}}</td>
+                    <td>
+                        <button (click)="delete(i)"> <span class="fa-solid fa-trash" style="color:red"> </span></button>
+                        <button (click)="showreports()"><span class="fa fa-file" aria-hidden="true" style="color:green" > </span></button>
+                        <button> <span class="fa-solid fa-pen-to-square" style="color:green" > </span></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div id="id01" class="w3-modal">
+    <div class="container">
+        <h4>Add Patient</h4>
+        <form class="form ">
+            <div class="row p-3 justify-content-center">
+                <div class="col-md-4">
+                    <label class="form-lable" for="doctorfname">First Name</label>
+                    <input class="form-control" type="text" name="doctorfname" id="doctorfname" required/>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-lable" for="doctorlname">Last Name</label>
+                    <input class="form-control" type="text" name="doctorlname" id="doctorlname" required/>
+                </div>
+                <div class="col-md-4">
+                    <label for="nationalId">National Id:</label>
+                    <input type="text" id="nationalId" name="nationalId" pattern="\d*" class="form-control" placeholder="enter your id" minlength="14" maxlength="14" required/>
+                </div>
+            </div>
+            <div class="row p-3 justify-content-center">
+                <div class="col-md-4">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" name="age" class="form-control " placeholder="Enter your age" required min="1" />
+                </div>
+                <div class="col-md-4">
+                    <label for="patenttype">Patient Type</label>
+                    <select class="form-control" id="patenttype" required>
+                        <option ></option>
+                        <option value="1">outpatient</option>
+                        <option value="2">inpatient</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-lable" for="Email">Email</label>
+                    <input class="form-control" type="email" name="Email" id="Email" required/>
+                </div>
+            </div>
+            <div class="row p-3 justify-content-center">
+                <div class="col-md-4">
+                    <label class="form-lable" for="phone">phone</label>
+                    <input class="form-control" type="tel" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{3}" required/>
+
+                </div>
+                <div class="col-md-4">
+                    <label class="form-lable" for="address">address</label>
+                    <input class="form-control" type="text" name="address" id="address" required/>
+
+                </div>
+                <div class="col-md-4">
+                    <label class="form-lable" for="Image">Image</label>
+                    <input class="form-control" type="file" name="Image" id="Image" accept="image/*" required/>
+
+                </div>
+            </div>
+            <div class="row p-3 justify-content-center">
+
+                <div class="col-md-4">
+                    <label for="blood">blood type</label>
+                    <select class="form-control" id="blood" required>
+        <option > </option>
+        <option value="A+">A+</option>
+        <option value="A-">A-</option>
+        <option value="B+">B+</option>
+      </select>
+                </div>
+                <div class="col-md-4">
+                    <label for="pass">Password</label>
+                    <input type="password" id="pass" name="pass" class="form-control" placeholder="Enter password" required/>
+
+                </div>
+            </div>
+            <div class="row p-3 justify-content-end">
+                <div class="col-sm-3">
+                    <input type="submit" value="submit" class="form-control" id="submit" />
+                </div>
+                <div class="col-sm-3">
+                    <input type="button" value="cancel" class="form-control" id="cancel" (click)="cancelmodel()" />
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="./src/assets/animate.js"></script>

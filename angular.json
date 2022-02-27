@@ -47,7 +47,7 @@
                             "node_modules/bootstrap/dist/jquery-3.6.0.min.js",
                             "node_modules/bootstrap/dist/js/bootstrap.min.js",
                             "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
-                            "src/assets/sidebartoggle.js"
+                            "src/assets/animate.js"
 
                         ]
                     },
