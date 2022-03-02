@@ -1,1 +1,89 @@
-<p>doctor works!</p>
+<div class="page-wrapper">
+    <div class="sidebar-wrapper" id="wrapper">
+        <div class="sidebar" id="sidebar-wrapper">
+            <!--logo in sidebar-->
+            <div class="logo-section d-flex justify-content-center align-items-center">
+                <div class="d-flex justify-content-center align-items-center">
+                    <span class="fa-solid fa-hospital logo-icon " style="color: rgb(18, 38, 126);;"></span>
+                    <p class="logo-text">University Hospital</p>
+                </div>
+            </div>
+            <!--end logo-->
+            <!--user info section-->
+            <div class="user-info py-3">
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <div>
+                        <img src="assets/admin.jpg" alt="profile" class="profile-img">
+                    </div>
+                    <div class="user-desc ">
+                        <h4>Ahmed Ali</h4>
+                        <p>Ahmed@gmail.com<br><span (click)="openmodel()">change password</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!--end user info section-->
+            <!--list of menu-->
+            <div class="list-group list-group-flush">
+                <a class="list-group-item list-group-item-action  second-text fw-bold" [routerLink]="'dashboard'" (click)="namecomponent('Dashboard')">
+                    <span class="fa-solid fa-gauge "></span><span>&nbsp;&nbsp;Dashboard</span>
+                </a>
+
+                <a class="list-group-item list-group-item-action  second-text  fw-bold" [routerLink]="'appointments'" (click)="namecomponent('Appointments')">
+                    <span class="fa fa-calendar  aria-hidden=true "></span><span>&nbsp;&nbsp;Appointments</span>
+                </a>
+                <a class="list-group-item list-group-item-action  second-text  fw-bold" [routerLink]="'patient/out'" (click)="namecomponent('Out Patient')">
+                    <span class="fa-solid fa-bed-pulse "></span><span>&nbsp;&nbsp;Out Patient</span>
+                </a>
+                <a class="list-group-item list-group-item-action  second-text  fw-bold" [routerLink]="'patient/in'" (click)="namecomponent('In Patient')">
+                    <span class="fa-solid fa-bed-pulse "></span><span>&nbsp;&nbsp;In Patient</span>
+                </a>
+                <a class="list-group-item list-group-item-action  text-danger  fw-bold" [routerLink]="''">
+                    <span class="fa-solid fa-arrow-right-from-bracket "></span><span>&nbsp;&nbsp;Log Out</span>
+                </a>
+            </div>
+            <!--end list menu-->
+        </div>
+    </div>
+    <div class="page-content-wrapper" id="page-content-wrapper">
+        <div class="page-content">
+            <div class="top-bar d-flex align-items-center">
+                <div class="d-flex justify-content-between align-items-center w-100">
+                    <div class="top-bar-left d-flex align-items-center">
+                        <span (click)=" togglebar()" class="fa-solid fa-grip-lines primary-text fs-4" id="menu-toggle"></span>
+                        <h2 class="fs-2 "> &nbsp;{{activecomponent}}</h2>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</div>
+<!--change password-->
+<div id="id01" class="modal">
+    <div class="container">
+        <h4>Change Password</h4>
+        <form class="form ">
+            <div class="row p-3 justify-content-center">
+                <div class="col-md-4">
+                    <label class="form-lable" for="doctorfname">Old Password</label>
+                    <input class="form-control" type="password" name="doctorfname" id="doctorfname" required/>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-lable" for="doctorlname">New Password</label>
+                    <input class="form-control" type="password" name="doctorlname" id="doctorlname" required/>
+                </div>
+            </div>
+            <div class="row p-3 justify-content-end">
+                <div class="col-sm-3">
+                    <input type="submit" value="submit" class="form-control" id="submit" />
+                </div>
+                <div class="col-sm-3">
+                    <input type="button" value="cancel" class="form-control" id="cancel" (click)="cancelmodel()" />
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

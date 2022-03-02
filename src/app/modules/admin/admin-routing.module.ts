@@ -7,10 +7,14 @@ import { ReportsComponent } from './reports/reports.component';
 import { DoctorComponent } from './doctor/doctor.component';
 import { NurseComponent } from './nurse/nurse.component';
 import { StaffComponent } from './staff/staff.component';
+import { DepartmentsComponent } from './departments/departments.component';
+import { SpecialistsComponent } from './specialists/specialists.component';
 
 const routes: Routes = [
   { path: '', component: AdminComponent,children: [
     {path: '', component: DoctorComponent},
+    {path:'department',component:DepartmentsComponent},
+    {path:'specialists',component:SpecialistsComponent},
     {path: 'dashboard', component: DashboardComponent},
     {path: 'patients', component: PatientComponent},
 

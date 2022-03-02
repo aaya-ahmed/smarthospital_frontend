@@ -7,8 +7,7 @@ declare const  togglebar:any;
   styleUrls: ['./admin.component.css']
 })
 export class AdminComponent implements OnInit {
-  navbartoggle=false;
-  dropdowntoggle=false;
+  toggle=false;
    activecomponent:string='';
   constructor(private active:ActivatedRoute) { 
     
@@ -20,13 +19,10 @@ export class AdminComponent implements OnInit {
   namecomponent(name_component:string){
     this.activecomponent=name_component;
   }
-  togglenavbar(){
-    this.navbartoggle=!this.navbartoggle;
-  }
-  toggledropdown(){
-    this.dropdowntoggle=!this.dropdowntoggle;
-  }
+
+
   togglebar(){
-    togglebar();
+this.toggle=!this.toggle;
+    togglebar(this.toggle);
 }  
 }

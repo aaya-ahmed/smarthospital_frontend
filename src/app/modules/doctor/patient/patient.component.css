@@ -1,0 +1,84 @@
+.container {
+    display: block;
+}
+
+.searching {
+    width: 100%;
+    padding: 1rem 0.5rem;
+}
+
+.searching label {
+    width: 90%;
+    border: none;
+    text-decoration: none;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.searching a:active {
+    color: black;
+}
+
+.searching button {
+    padding: 0.5rem 2rem;
+}
+
+input[type=checkbox] {
+    visibility: hidden;
+    position: absolute;
+}
+
+div.searching-fields {
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+    background-color: white;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+input:checked~div.searching-fields {
+    max-height: fit-content;
+    padding: 1rem;
+    background-color: rgba(185, 184, 184, 0.5);
+}
+
+.btn {
+    background-color: #38608d;
+    border: none;
+    color: white;
+}
+
+#doctor-operation {
+    display: none;
+    position: absolute;
+    width: 75%;
+    margin: 0 auto;
+}
+
+#doctor-operation .row {
+    margin: 40px;
+}
+
+#doctor-operation .row .col-lg-4,
+.col-sm-10 {
+    padding: 30px;
+    background-color: #e4eaf7;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.card-header {
+    background-color: aliceblue;
+    border-bottom: 2px solid rgb(83, 83, 175);
+    font-family: 'Gill Sans MT';
+}
+
+.card-footer {
+    background-image: linear-gradient( to right, #cae6f8, #cbdcf7, #d4e4f8, #d9e5f5, #e4eaf7);
+}
+
+.card-footer .fa,
+.card-footer .fa-solid {
+    color: rgb(73, 75, 155);
+    cursor: pointer;
+}

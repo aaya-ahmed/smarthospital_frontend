@@ -11,6 +11,10 @@ import { DoctorComponent } from './doctor/doctor.component';
 import { NurseComponent } from './nurse/nurse.component';
 import { StaffComponent } from './staff/staff.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SpecialistsComponent } from './specialists/specialists.component';
+import { DoctorSchaduleComponent } from './doctor-schadule/doctor-schadule.component';
+import { DepartmentsComponent } from './departments/departments.component';
+import { SeatBedsComponent } from './seat-beds/seat-beds.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +24,11 @@ import { HttpClientModule } from '@angular/common/http';
     DashboardComponent,
     DoctorComponent,
     NurseComponent,
-    StaffComponent  ],
+    StaffComponent,
+    SpecialistsComponent,
+    DoctorSchaduleComponent,
+    DepartmentsComponent,
+    SeatBedsComponent  ],
   imports: [
     AdminRoutingModule,
     CommonModule,

@@ -1,0 +1,60 @@
+<div class="container-fluid">
+    <div class="d-block p-3 head m-0">
+        <button class="btn text-white btn-success " (click)="openmodel()">Add Department </button>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-striped ">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Departement</th>
+                    <th>Description</th>
+                    <th>State</th>
+                    <th>Options</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let i of  departmentlist; ">
+                    <td>{{i.id}}</td>
+                    <td>{{i.department}}</td>
+                    <td>{{i.description}}</td>
+                    <td>{{i.state}}</td>
+                    <td>
+                        <button> <span class="fa-solid fa-pen-to-square " style="color:green " > </span>
+          </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div id="id01" class="modal">
+    <div class="container">
+        <h4>Add Department</h4>
+        <form class="form ">
+            <div class="form-group">
+                <label class="form-lable" for="departmentname">Department Name</label>
+                <input class="form-control" type="text" name="departmentname" id="departmentname" required/>
+            </div>
+            <div class="form-group">
+                <label class="form-lable" for="Description">Description</label>
+                <textarea class="form-control" cols="5" row="10" name="Description" id="Description" required></textarea>
+            </div>
+            <div class="form-group">
+                <label class="form-lable" for="state">Departement State</label><br>
+                <input type="radio" name="sate" id="state" value="active" />Active<br>
+                <input type="radio" name="sate" id="state" value="inactive" />Inactive<br>
+            </div>
+
+
+            <div class="row p-3 justify-content-end">
+                <div class="col-sm-3">
+                    <input type="submit" value="submit" class="form-control" id="submit" />
+                </div>
+                <div class="col-sm-3">
+                    <input type="button" value="cancel" class="form-control" id="cancel" (click)="cancelmodel()" />
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

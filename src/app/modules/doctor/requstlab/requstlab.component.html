@@ -1,0 +1,55 @@
+<div>
+    <form class="form ">
+        <div class="row p-3 justify-content-center">
+            <div class="col-md-4">
+                <label class="form-lable" for="idpatient">ID Patient</label>
+                <input class="form-control" type="text" name="idpatient" id="idpatient" disabled/>
+            </div>
+            <div class="col-md-4">
+                <label class="form-lable" for="doctorname">Doctor Name</label>
+                <input class="form-control" type="text" name="doctorname" id="doctorname" disabled/>
+            </div>
+            <div class="col-md-4">
+                <label class="form-lable" for="Department">Department</label>
+                <input class="form-control" type="text" name="Department" id="Department" disabled/>
+            </div>
+        </div>
+        <select class="select" multiple>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+            <option value="4">Four</option>
+            <option value="5">Five</option>
+            <option value="6">Six</option>
+            <option value="7">Seven</option>
+            <option value="8">Eight</option>
+          </select>
+        <div id="choose-lab-test" class="lab-row">
+            <label class="form-lable address" for="choose-lab-test">choose lab test</label>
+            <div *ngFor="let i of labs">
+                <label class="container">{{i}}
+                    <input type="checkbox"  name="lab" value="{{i}}" />
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+        </div>
+        <div id="choose-ray" class="lab-row">
+            <label class="form-lable address" for="choose-ray">choose ray</label>
+            <div *ngFor="let i of rays">
+                <label class="container">{{i}}
+                    <input type="checkbox"  name="ray" value="{{i}}" />
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+        </div>
+
+        <div class="row p-3 justify-content-end">
+            <div class="col-sm-3">
+                <input type="submit" value="submit" class="form-control" id="submitrequst" />
+            </div>
+            <div class="col-sm-3">
+                <input type="button" value="cancel" class="form-control" id="cancelrequst" (click)="prevpage()" />
+            </div>
+        </div>
+    </form>
+</div>

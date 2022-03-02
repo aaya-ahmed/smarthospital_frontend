@@ -1,7 +1,5 @@
-.appoinment {
-    z-index: 2;
-    background-repeat: no-repeat;
-    background-size: cover;
+.card-body {
+    padding-left: 0.5rem 1rem 1rem 1rem;
 }
 
 .btn {
@@ -10,5 +8,9 @@
 }
 
 .book {
-    color: #38608d;
+    width: 100%;
+    background-color: rgb(102, 136, 180);
+    padding: 5px;
+    color: #e8ecf1;
+    border-radius: 15px 15px 0 0;
 }

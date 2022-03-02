@@ -25,7 +25,8 @@ login:FormGroup=new FormGroup({
   get userpassv(){
     return this.login.controls['userpass']
   }
-  loginform:login[]=[];
+  submit(){}
+ /* loginform:login[]=[];
 submit(){
   let id:string=this.useridv.value;
   let pass:string=this.userpassv.value;
@@ -35,4 +36,5 @@ submit(){
   }
   })}
   );
-}}
+}*/
+}

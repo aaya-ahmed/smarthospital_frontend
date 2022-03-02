@@ -1,0 +1,16 @@
+.header{
+    background-color: #d5e3f3;
+    color: white;
+    text-align: center;
+    margin: auto;
+    width: 50%;
+    position:sticky;
+   
+  }
+  div.patientinfo{
+      border-bottom: solid;
+  }
+  .info{
+     color: #235c9c;
+  }
+    

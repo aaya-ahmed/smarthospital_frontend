@@ -55,6 +55,8 @@ input:checked~div.searching-fields {
     display: block;
     width: 100%;
     overflow-x: auto;
+    overflow-y: scroll;
+    height: 60vh;
 }
 
 th {
@@ -71,7 +73,7 @@ table tbody tr td button {
     margin: 0 auto;
 }
 
-.w3-modal {
+.modal {
     width: 100%;
     display: none;
     z-index: 3;
@@ -85,14 +87,14 @@ table tbody tr td button {
     background-color: rgba(0, 0, 0, 0.7);
 }
 
-.w3-modal .container {
+.modal .container {
     width: 60%;
     background-color: white;
     border-radius: 10px;
     border: 2px solid #bcc5d6;
 }
 
-.w3-modal .container h4 {
+.modal .container h4 {
     text-align: center;
     padding: 10px 0px;
     color: #38568d;
@@ -112,4 +114,30 @@ table tbody tr td button {
 .btn {
     background-color: #38608d;
     border: none;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+
+/* Track */
+
+ ::-webkit-scrollbar-track {
+    background: #fcfafa;
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+
+/* Handle on hover */
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }

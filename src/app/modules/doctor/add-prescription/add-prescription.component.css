@@ -1,0 +1,56 @@
+.w3-modal {
+    width: 100%;
+    height: 100%;
+    
+    
+}
+
+.w3-modal .container {
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #bcc5d6;
+}
+
+.w3-modal .container h4 {
+    text-align: center;
+    padding: 10px 0px;
+    color: #38568d;
+}
+
+#submit,
+#cancel {
+    background-color: #38608d;
+    border: none;
+    color: white;
+}
+
+.fa-plus{
+    color: white;
+    background-color: green;
+    width: 75%;
+    text-align: center;
+    padding-top: 4px;
+    padding-right: 18px;
+    
+    
+}
+.fa-check{
+    color: white;
+    background-color: green;
+    
+}
+
+.fa-save,.fa-edit{
+    background-color: #38568d;
+    color: white;
+    width:30%;
+    display: inline;
+    margin: 2px;
+    
+}
+.fa-times{
+    background-color: red;
+    color: white;
+    display: inline;
+}

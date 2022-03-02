@@ -1,4 +1,4 @@
-<div class="d-flex" id="wrapper">
+<!--<div class="d-flex" id="wrapper">
     <div class="bg-white " id="sidebar-wrapper">
         <div class="sidebar-heading text-center py-3 primary-text fs-2 fw-bold text-uppercase">
             <h6 class="align-self-center"><span class="fa-solid fa-hospital"></span><span>&nbsp;University Hospital</span></h6>
@@ -58,8 +58,77 @@
         </div>
     </div>
 </div>
+<script src="./src/assets/animate.js "></script>-->
+<div class="page-wrapper">
+    <div class="sidebar-wrapper" id="wrapper">
+        <div class="sidebar" id="sidebar-wrapper">
+            <!--logo in sidebar-->
+            <div class="logo-section d-flex justify-content-center align-items-center">
+                <div class="d-flex justify-content-center align-items-center">
+                    <span class="fa-solid fa-hospital logo-icon " style="color: rgb(18, 38, 126);;"></span>
+                    <p class="logo-text">University Hospital</p>
+                </div>
+            </div>
+            <!--end logo-->
+            <!--user info section-->
+            <div class="user-info py-3">
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <div>
+                        <img src="assets/admin.jpg" alt="profile" class="profile-img">
+                    </div>
+                    <div class="user-desc ">
 
+                        <h4>Ahmed Ali</h4>
+
+                        <p>Ahmed@gmail.com</p>
+
+                    </div>
+                </div>
+            </div>
+            <!--end user info section-->
+            <!--list of menu-->
+            <div class="list-group list-group-flush">
+                <a class="list-group-item list-group-item-action  second-text fw-bold" [routerLink]="'dashboard'" (click)="namecomponent('dashboard')">
+                    <span class="fa-solid fa-gauge "></span><span>&nbsp;&nbsp;Dashboard</span>
+                </a>
+                <a class="list-group-item list-group-item-action  second-text  fw-bold" [routerLink]="'doctor'" (click)="namecomponent('doctor')">
+                    <span class="fa-solid fa-user-doctor "></span><span>&nbsp;&nbsp;Doctors</span>
+                </a>
+                <a class="list-group-item list-group-item-action  second-text  fw-bold" [routerLink]="'nurse'" (click)="namecomponent('nurse')">
+                    <span class="fa-solid fa-user-nurse "></span><span>&nbsp;&nbsp;Nurses</span>
+                </a>
+                <a class="list-group-item list-group-item-action  second-text  fw-bold" [routerLink]="'patients'" (click)="namecomponent('patients')">
+                    <span class="fa-solid fa-bed-pulse "></span><span>&nbsp;&nbsp;Patients</span>
+                </a>
+                <a class="list-group-item list-group-item-action  second-text  fw-bold" [routerLink]="'staff'" (click)="namecomponent('staff')">
+                    <span class="fa-solid fa-x-ray "></span><span>&nbsp;&nbsp;Staff Members</span>
+                </a>
+                <a class="list-group-item list-group-item-action  second-text  fw-bold" [routerLink]="'report'" (click)="namecomponent('report')">
+                    <span class="fa fa-file " aria-hidden="true"></span><span>&nbsp;&nbsp;Reports</span>
+                </a>
+                <a class="list-group-item list-group-item-action  text-danger  fw-bold" [routerLink]="''">
+                    <span class="fa-solid fa-arrow-right-from-bracket "></span><span>&nbsp;&nbsp;Log Out</span>
+                </a>
+            </div>
+            <!--end list menu-->
+        </div>
+    </div>
+    <div class="page-content-wrapper" id="page-content-wrapper">
+        <div class="page-content">
+            <div class="top-bar d-flex align-items-center">
+                <div class="d-flex justify-content-between align-items-center w-100">
+                    <div class="top-bar-left d-flex align-items-center">
+                        <span (click)=" togglebar()" class="fa-solid fa-grip-lines primary-text fs-4" id="menu-toggle"></span>
+                        <h2 class="fs-2 "> &nbsp;{{activecomponent}}</h2>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <router-outlet></router-outlet>
+
+            </div>
+        </div>
+
+    </div>
+</div>
 <script src="./src/assets/animate.js "></script>
-<script src="node_modules/bootstrap/dist/jquery-3.6.0.min.js "></script>
-<script src="node_modules/bootstrap/dist/js/bootstrap.min.js "></script>
-<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js "></script>

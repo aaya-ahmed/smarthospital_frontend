@@ -1,0 +1,17 @@
+#accept,
+#reject {
+    border: none;
+    background-color: rgb(45, 148, 45);
+    padding: 5px 10px 5px 10px;
+    color: white;
+    margin: 0px 10px 0 10px;
+    border-radius: 4px;
+}
+
+#reject {
+    background-color: rgb(170, 20, 20);
+}
+
+table tr td {
+    vertical-align: middle;
+}
