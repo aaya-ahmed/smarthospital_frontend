@@ -1,0 +1,12 @@
+.form {
+    border: 2px solid rgb(41, 126, 175);
+    border-radius: 10px;
+    color: rgb(43, 104, 122);
+}
+
+#vitalsubmit,
+#vitalcancel {
+    background-color: #38608d;
+    border: none;
+    color: white;
+}

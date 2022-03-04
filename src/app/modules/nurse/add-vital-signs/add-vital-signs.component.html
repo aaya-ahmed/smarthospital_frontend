@@ -1,0 +1,72 @@
+<div class="container">
+    <div class="d-flex justify-content-center mt-10 form-info">
+        <form class="form w-100">
+            <div class="row form-group m-2 mt-4">
+                <div class="col-lg-4 col-md-5 ">
+                    <label class="pb-2" for="patientid">Patient Id</label><br>
+                    <input class="form-control" type="text" id="patientid" name='patientid' required/>
+                </div>
+                <div class="col-lg-4 col-md-5">
+                    <label class="pb-2" for="patientname">Patient Name</label><br>
+                    <input class="form-control" type="text" id="patientname" name='patientname' required/>
+                </div>
+                <div class="col-lg-4 col-md-5">
+                    <label class="pb-2" for="patientgender">Patient Gender</label><br>
+                    <select class="form-control" id="patientgender" name='patientgender' required>
+                        <option value="female">Female</option>
+                        <option value="male">male</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row form-group m-2 mt-4">
+                <div class="col-lg-4 col-md-5">
+                    <label class="pb-2" for="weight">Weight</label><br>
+                    <input class="form-control" type="text" id="weight" name='weight' required/>
+                </div>
+                <div class="col-lg-4 col-md-5">
+                    <label class="pb-2" for="patientpreasure">Blood Preasure</label><br>
+                    <input class="form-control" type="text" id="patientpreasure" name='patientpreasure' required/>
+                </div>
+                <div class="col-lg-4 col-md-5">
+                    <label class="pb-2" for="patientpluserate">Pluse Rate</label><br>
+                    <input class="form-control" type="text" id="patientpluserate" name='patientpluserate' required/>
+                </div>
+            </div>
+            <div class="row form-group m-2 mt-4">
+                <div class="col-lg-4 col-md-5">
+                    <label class="pb-2" for="Temperature">Temperature</label><br>
+                    <input class="form-control" type="text" id="Temperature" name='Temperature' required/>
+                </div>
+                <div class="col-lg-4 col-md-5">
+                    <label class="pb-2" for="respiratoryrate">Respiratory Rate</label><br>
+                    <input class="form-control" type="text" id="respiratoryrate" name='respiratoryrate' required/>
+                </div>
+                <div class="col-lg-4 col-md-5">
+                    <label class="pb-2" for="signature">Signature</label><br>
+                    <input class="form-control" type="text" id="signature" name='signature' required/>
+                </div>
+            </div>
+            <div class="row form-group m-2 mt-4">
+                <div class="col-lg-4 col-md-5">
+                    <label class="pb-2" for="Comment">Comment</label><br>
+                    <select class="form-control" type="text" id="Comment" name='Comment' required>
+                        <option value="stable">stable</option>
+                        <option value="unstable">unstable</option>
+                    </select>
+                </div>
+                <div class="col-lg-4 col-md-5">
+                    <label class="pb-2" for="nursename">Nurse Name</label><br>
+                    <input class="form-control" type="text" id="nursename" name='nursename' required/>
+                </div>
+            </div>
+            <div class="row form-group m-2 mt-4 justify-content-end">
+                <div class="col-lg-3 col-md-5">
+                    <input type="submit" value="submit" class="form-control" id="vitalsubmit" />
+                </div>
+                <div class="col-lg-3 col-md-5">
+                    <input type="button" value="cancel" class="form-control" id="vitalcancel" />
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

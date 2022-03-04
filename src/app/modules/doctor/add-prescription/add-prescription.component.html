@@ -13,7 +13,7 @@
                 </div>
                 <div class="col-md-4">
                     <label for="doctorname">Doctor Name:</label>
-                    <input type="text" id="doctorname" name="doctorname"  class="form-control"  required/>
+                    <input type="text" id="doctorname" name="doctorname" class="form-control" required/>
                 </div>
             </div>
             <div class="row p-3 justify-content-center">
@@ -24,7 +24,7 @@
                         <option value="1">Male</option>
                         <option value="2">Female</option>
                     </select>
-                 </div>
+                </div>
                 <div class="col-md-4">
                     <label for="patenttype">Patient Type</label>
                     <select class="form-control" id="patenttype" required>
@@ -35,8 +35,8 @@
                 </div>
                 <div class="col-md-4">
                     <label for="dept">Departement:</label>
-                                <input type="text" class="form-control" name="example" id="dept" list="departement" placeholder="choose departement">
-                                <datalist id="departement" required>
+                    <input type="text" class="form-control" name="example" id="dept" list="departement" placeholder="choose departement">
+                    <datalist id="departement" required>
                         <option value=" Gastro-Intestinal (GIT) | الجهاز الهضمي">
                         <option value="Urology | جراحة المسالك البولية"> 
                         <option value=" Cardiothoracic Surgery | جراحة القلب والصدر">
@@ -51,7 +51,7 @@
                         <option value=" Internal Medicine | الطب الباطني"> 
                       </datalist>
                 </div>
-              
+
             </div>
             <div class="table-responsive">
                 <table class="table table-striped ">
@@ -60,18 +60,31 @@
                             <th>Medicine Name</th>
                             <th>Medicine strength</th>
                             <th>Instructions</th>
+                            <th>Medicine Type </th>
                             <th>Duration</th>
+                            <th>Repitition number</th>
                             <th>Dose</th>
-                            <th><div class="fa fa-plus btn btn-success" aria-hidden="true"(click)="add()"></div></th>
-                            
+                            <th>
+                                <div class="fa fa-plus btn btn-success" aria-hidden="true" (click)="add()"></div>
+                            </th>
+
                         </tr>
                     </thead>
                     <tbody>
                         <tr *ngFor="let f of prescription;let i=index">
-                            
+
                             <td><input type="text" class="form-control" [disabled]=true value="{{f.medicine_name}}" #medicine_name></td>
                             <td><input type="text" class="form-control" [disabled]=true value="{{f.medicine_strength}}" #medicine_strength></td>
                             <td><input type="text" class="form-control" [disabled]=true value="{{f.instructions}}" #instructions></td>
+                            <td><input type="text" class="form-control" [disabled]=true value="{{f.medicine_type}}" #medicine_type id="dept" list="medicine_typ" placeholder="choose medicine type">
+                                <datalist id="medicine_typ" required>
+                                    <option value="Liquid">
+                                    <option value="Capsules">
+                                    <option value="Drops">
+                                    <option value="Injections">  
+                                    <option value="Rectal Suppositories">      
+                                 </datalist>
+                            </td>
                             <td>
                                 <div class="input-group">
                                     <input type="number" class="form-control" [disabled]=true value="{{f.duration}}" #duration style="width: 50%;">
@@ -82,10 +95,10 @@
 
                                     </select>
                                 </div>
-                            </td>    
+                            </td>
                             <td>
                                 <div class="input-group">
-                                    <input type="number" class="form-control" [disabled]=true value="{{f.dose}}" #dose style="width: 50%;"> 
+                                    <input type="number" class="form-control" [disabled]=true value="{{f.repitition_number}}" #repitition_number style="width: 50%;">
                                     <select class="form-select" aria-label="Default select example" style="width: 50%;">
                                         <option value="day">Daily</option>
                                         <option value="month">Monthly</option>
@@ -94,26 +107,39 @@
                                     </select>
                                 </div>
                             </td>
+                            <td><input type="text" class="form-control" [disabled]=true value="{{f.dose}}" #dose></td>
+
                             <td>
                                 <div>
-                                    <div class="btn fas fa-edit" (click)="switchin(medicine_name,medicine_strength,instructions,duration,dose)">
-                                    
+                                    <div class="btn fas fa-edit" (click)="switchin(medicine_name,medicine_strength,instructions,medicine_type,duration,repitition_number,dose)">
+
                                     </div>
-                                    <div  class=" btn fa fa-save" (click)="update(medicine_name,medicine_strength,instructions,duration,dose)">
+                                    <div class=" btn fa fa-save" (click)="update(medicine_name,medicine_strength,instructions,duration,medicine_type,repitition_number,dose)">
                                     </div>
-                                    <div  class=" btn fas fa-times" (click)="deleterow(f)">
+                                    <div class=" btn fas fa-times" (click)="deleterow(f)">
                                     </div>
                                 </div>
                             </td>
                         </tr>
-        <!--to add new item we will make new row but it invalid untill user click on add button-->
+                        <!--to add new item we will make new row but it invalid untill user click on add button-->
                         <tr *ngIf="flag">
-                           
-                            <td><input type="text" ngModel class="form-control" name="medicine_namepro"  ngModel #medicine_namepro='ngModel'></td>
-                            <td><input type="text" ngModel class="form-control"  name="medicine_strengthpro"  ngModel #medicine_strengthpro='ngModel'></td>
-                            <td><input type="text" ngModel class="form-control" name="instructionspro"  ngModel #instructionspro='ngModel'></td>
-                            <td><div class="input-group">
-                                    <input type="number" class="form-control" ngModel name="durationpro"  ngModel #durationpro='ngModel' style="width: 50%;">
+
+                            <td><input type="text" ngModel class="form-control" name="medicine_namepro" ngModel #medicine_namepro='ngModel'></td>
+                            <td><input type="text" ngModel class="form-control" name="medicine_strengthpro" ngModel #medicine_strengthpro='ngModel'></td>
+                            <td><input type="text" ngModel class="form-control" name="instructionspro" ngModel #instructionspro='ngModel'></td>
+                            <td><input type="text" ngModel class="form-control" name="medicine_typepro" ngModel #medicine_typepro='ngModel' list="medicine_typ" placeholder="choose medicine type">
+                                <datalist id="medicine_typ" required>
+                                    <option value="Liquid">
+                                    <option value="Capsules">
+                                    <option value="Drops">
+                                    <option value="Injections">  
+                                    <option value="Rectal Suppositories">    
+                                 </datalist>
+                            </td>
+
+                            <td>
+                                <div class="input-group">
+                                    <input type="number" class="form-control" ngModel name="durationpro" ngModel #durationpro='ngModel' style="width: 50%;">
                                     <select class="form-select" aria-label="Default select example" style="width: 50%;">
                                         <option value="day">Days</option>
                                         <option value="month">Months</option>
@@ -124,7 +150,7 @@
                             </td>
                             <td>
                                 <div class="input-group">
-                                    <input type="number" class="form-control" ngModel name="dosepro"  ngModel #dosepro='ngModel' style="width: 50%;" >
+                                    <input type="number" class="form-control" ngModel name="repitition_numberpro" ngModel #repitition_numberpro='ngModel' style="width: 50%;">
                                     <select class="form-select" aria-label="Default select example" style="width: 50%;">
                                         <option value="day">Daily</option>
                                         <option value="month">Monthly</option>
@@ -133,13 +159,15 @@
                                     </select>
                                 </div>
                             </td>
+                            <td><input type="text" ngModel class="form-control" name="dosepro" ngModel #dosepro='ngModel'></td>
+
                             <td>
-                                <div  class="btn fas fa-check " (click)="save(medicine_namepro,medicine_strengthpro,instructionspro,durationpro,dosepro)">
-                                    
+                                <div class="btn fas fa-check " (click)="save(medicine_namepro,medicine_strengthpro,instructionspro,medicine_typepro,durationpro,repitition_numberpro,dosepro)">
+
                                 </div>
-                               
+
                             </td>
-                        </tr>          
+                        </tr>
                     </tbody>
                 </table>
             </div>

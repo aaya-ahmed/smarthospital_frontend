@@ -1,0 +1,41 @@
+<div class="container">
+
+    <table class="table table-striped table-bordered table-sm row-border hover">
+        <thead class="table-header">
+            <tr>
+                <th scope="col">Check</th>
+                <th scope="col">Patient Id</th>
+                <th scope="col">Patient Name</th>
+                <th scope="col">Medicine Name</th>
+                <th scope="col">Medicine Type</th>
+                <th scope="col">Medicine Strength</th>
+                <th scope="col">Instructions</th>
+                <th scope="col">Dose</th>
+                <th scope="col">Dose Time(in hour)</th>
+                <th scope="col">Doctor Name</th>
+                <th scope="col">Nurse Signature</th>
+                <th scope="col">Save Changes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let f of checkMedicine;let i=index">
+
+                <td><input type="checkbox" [checked]="isChecked" value="{{f.patient_id}}" class="form-check-input check" #check></td>
+                <td #patient_id>{{f.patient_id}}</td>
+                <td #patient_name>{{f.patient_name}}</td>
+                <td #medicine_name>{{f.medicine_name}}</td>
+                <td #medicine_type>{{f.medicine_type}}</td>
+                <td #medicine_strength>{{f.medicine_strength}}</td>
+                <td #instructions>{{f.instructions}}</td>
+                <td #dose>{{f.dose}}</td>
+                <td #dose_time>{{f.dose_time}}</td>
+                <td #doctor_name>{{f.doctor_name}}</td>
+                <td><input type="text" class="form-control" #nurse></td>
+                <td>
+                    <div class="btn fas fa-check " (click)="save(check,patient_id,nurse)"></div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>

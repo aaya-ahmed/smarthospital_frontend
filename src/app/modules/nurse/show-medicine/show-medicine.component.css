@@ -1,0 +1,32 @@
+.header {
+    background-color: #d5e3f3;
+    color: white;
+    text-align: center;
+    margin: auto;
+    width: 50%;
+    position: sticky;
+}
+
+table {
+    width: 100%;
+    overflow-x: scroll;
+    margin: 0;
+}
+
+table tr th {
+    vertical-align: middle
+}
+
+.table-header {
+    background-color: #afd2fa;
+}
+
+.fa-check {
+    color: white;
+    background-color: green;
+}
+
+.container {
+    margin: 0;
+    padding: 0;
+}

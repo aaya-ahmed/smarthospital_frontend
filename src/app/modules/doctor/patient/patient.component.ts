@@ -29,7 +29,7 @@ resetview(){
   resetview();
 }
 gotoappointment(){
-this.route.navigate(['./doctor/patient/out/appointmet']);
+this.route.navigate(['./doctor/patient/out/appointment']);
 }
 gotorequestlab(){
   if(this.typepatient==='in')
