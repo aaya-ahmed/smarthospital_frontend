@@ -33,19 +33,18 @@
                             "src/styles.css",
                             "node_modules/bootstrap/dist/css/bootstrap.min.css",
                             "node_modules/bootstrap/dist/css/bootstrap.css",
-                            "node_modules/@fontawesome/css/brands.css",
-                            "node_modules/@fontawesome/css/solid.css",
-                            "node_modules/@fontawesome/css/all.css",
-                            "node_modules/@fontawesome/css/all.min.css",
-                            "node_modules/@fontawesome/css/regular.css",
-                            "node_modules/@fontawesome/css/brands.min.css",
-                            "node_modules/@fontawesome/css/solid.min.css",
-                            "node_modules/@fontawesome/css/regular.min.css",
-                            "node_modules/@fontawesome/css/fontawesome.css"
+                            "node_modules/@fortawesome/fontawesome-free/css/brands.css",
+                            "node_modules/@fortawesome/fontawesome-free/css/solid.css",
+                            "node_modules/@fortawesome/fontawesome-free/css/all.css",
+                            "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
+                            "node_modules/@fortawesome/fontawesome-free/css/regular.css",
+                            "node_modules/@fortawesome/fontawesome-free/css/brands.min.css",
+                            "node_modules/@fortawesome/fontawesome-free/css/solid.min.css",
+                            "node_modules/@fortawesome/fontawesome-free/css/regular.min.css",
+                            "node_modules/@fortawesome/fontawesome-free/css/fontawesome.css"
                         ],
                         "scripts": [
                             "node_modules/jquery/dist/jquery.min.js",
-                            "node_modules/bootstrap/dist/jquery-3.6.0.min.js",
                             "node_modules/bootstrap/dist/js/bootstrap.min.js",
                             "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
                             "src/assets/animate.js"
