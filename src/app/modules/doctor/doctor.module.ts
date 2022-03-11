@@ -10,6 +10,7 @@ import { RequstlabComponent } from './requstlab/requstlab.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FormsModule } from '@angular/forms';
 import { AddPrescriptionComponent } from './add-prescription/add-prescription.component';
+import { ShowVitalSignsComponent } from './show-vital-signs/show-vital-signs.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { AddPrescriptionComponent } from './add-prescription/add-prescription.co
     PatientComponent,
     RequstlabComponent,
     DashboardComponent,
-    AddPrescriptionComponent
+    AddPrescriptionComponent,
+    ShowVitalSignsComponent
   ],
   imports: [
     CommonModule,

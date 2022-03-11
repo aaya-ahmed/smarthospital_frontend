@@ -7,6 +7,7 @@ import { MakeAppoinmentComponent } from './main component/make-appoinment/make-a
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
+  {path:'home',component:HomeComponent},
   {path:'login',component:LoginComponent},
   {path:'appointment',component:MakeAppoinmentComponent},
   {path: 'admin', loadChildren: () => import('./modules/admin/admin.module').then(m => m.AdminModule) },

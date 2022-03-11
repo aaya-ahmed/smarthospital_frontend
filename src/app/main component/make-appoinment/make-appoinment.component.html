@@ -10,8 +10,8 @@
                         <form action=" " method="post">
                             <div class="row form-group">
                                 <div class="col">
-                                    <label for="fname">Frist Name:</label>
-                                    <input type="text" class="form-control" id="fname" name="fname" required>
+                                    <label for="fname">First Name:</label>
+                                    <input type="text" class="form-control" id="fname" name="fname" pattern="/^[a-z ,.'-]+$/i"  required>
                                 </div>
                                 <div class="col">
                                     <label for="lname">Last Name:</label>
@@ -20,39 +20,39 @@
                             </div>
                             <div class="form-group">
                                 <label for="email"> Email</label>
-                                <input type="email" class="form-control" id="email" name="email">
+                                <input type="email" class="form-control" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
                             </div>
 
                             <div class="row form-group">
                                 <div class="col">
                                     <label for="nationalId">National Id:</label>
-                                    <input type="text" id="nationalId" name="nationalId" pattern="\d*" class="form-control" placeholder="enter your id" minlength="14" maxlength="14" required/>
+                                    <input type="text" id="nationalId" name="nationalId" class="form-control" pattern="^29\d{1,12}$" placeholder="Enter your id" minlength="14" maxlength="14" required/>
                                 </div>
                                 <div class="col">
 
                                     <label for="phone">Phone Number:</label>
-                                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="01xxxxxxxxx" required maxlength="11" minlength="11">
+                                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="01xxxxxxxxx" pattern="^01[0-5]\d{1,8}$" required maxlength="11" minlength="11">
                                 </div>
                             </div>
 
                             <div class=" form-group">
 
                                 <label for="dept">Departement:</label>
-                                <input type="text" class="form-control" name="example" id="dept" list="departement" placeholder="choose departement">
+                                <input type="text" class="form-control" name="example" id="dept" list="departement" placeholder="choose departement" required>
                                 <datalist id="departement" required>
-                        <option value=" Gastro-Intestinal (GIT) | الجهاز الهضمي">
-                        <option value="Urology | جراحة المسالك البولية"> 
-                        <option value=" Cardiothoracic Surgery | جراحة القلب والصدر">
-                        <option value=" Dermatology | الجلدية"> 
-                        <option value="Ear, Nose & Throat | أنف وأذن وحنجرة">
-                        <option value=" General Surgery | الجراحة العامة"> 
-                        <option value="Gynecology & Obstetrics | أمراض النساء والتوليد">
-                        <option value="Orthopedic Surgery | جراحة العظام"> 
-                        <option value="Kidney Diseases | أمراض الكلى"> 
-                        <option value="Orthopedics Pediatrics | طب الأطفال"> 
-                        <option value="Ophthalmology | طب العيون">
-                        <option value=" Internal Medicine | الطب الباطني"> 
-                      </datalist>
+                                    <option value=" Gastro-Intestinal (GIT) | الجهاز الهضمي">
+                                    <option value="Urology | جراحة المسالك البولية"> 
+                                    <option value=" Cardiothoracic Surgery | جراحة القلب والصدر">
+                                    <option value=" Dermatology | الجلدية"> 
+                                    <option value="Ear, Nose & Throat | أنف وأذن وحنجرة">
+                                    <option value=" General Surgery | الجراحة العامة"> 
+                                    <option value="Gynecology & Obstetrics | أمراض النساء والتوليد">
+                                    <option value="Orthopedic Surgery | جراحة العظام"> 
+                                    <option value="Kidney Diseases | أمراض الكلى"> 
+                                    <option value="Orthopedics Pediatrics | طب الأطفال"> 
+                                    <option value="Ophthalmology | طب العيون">
+                                    <option value=" Internal Medicine | الطب الباطني"> 
+                                </datalist>
                             </div>
                             <div class="form-outline">
                                 <label for="address"> Adress</label>
@@ -62,19 +62,19 @@
                             <div class=" form-group">
 
                                 <label for="doctor">Doctor:</label>
-                                <input type="text" class="form-control" name="example" id="doctor" list="doc" placeholder="choose your favourite doctor">
+                                <input type="text" class="form-control" name="example" id="doctor" list="doc" placeholder="choose your favourite doctor" required>
                                 <datalist id="doc" required>
-                    <option value=" Amira Eid ">
-                    <option value="Aya Ahmed"> 
-                    <option value=" Aya Medhat">
-                    <option value=" Mai Ali"> 
-                     </datalist>
+                                    <option value=" Amira Eid ">
+                                    <option value="Aya Ahmed"> 
+                                    <option value=" Aya Medhat">
+                                    <option value=" Mai Ali"> 
+                                </datalist>
                             </div>
                             <div class="row form-group">
                                 <div class="col">
                                     <label for="time">Appoinment time:</label>
                                     <select class="form-control" id="time" name="time" required>
-                                        <option >Select Appoinment time slot :</option>
+                                        <option>Select Appoinment time slot :</option>
                                         <option value="1">9:00 AM - 9:30 AM</option>
                                         <option value="2">9:30 AM - 10:00 AM</option>
                                         <option value="3">10:00 AM - 10:30 AM</option>
@@ -89,8 +89,13 @@
                                 </div>
                             </div>
                             <br>
-                            <div class="d-flex justify-content-center">
-                                <button type="button" class="btn   btn-lg gradient-custom-4 ">submit</button>
+                            <div class="row p-3 justify-content-end">
+                                <div class="col-sm-3">
+                                    <input type="submit" value="Submit" class="form-control btn" id="submit" />
+                                </div>
+                                <div class="col-sm-3">
+                                    <input type="button" value="Cancel" class="form-control btn" id="cancel" (click)="cancelmodel()" />
+                                </div>
                             </div>
 
                         </form>
@@ -100,3 +105,4 @@
         </div>
     </div>
 </div>
+<script src="./src/assets/animate.js"></script>
