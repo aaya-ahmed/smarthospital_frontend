@@ -2,16 +2,17 @@
       margin: 0;
       box-sizing: border-box;
   }
- 
+  
   .header-top {
       background-color: rgb(151, 205, 212);
       padding: 10px 1rem;
       margin: 0;
   }
- 
-  .logo{
+  
+  .logo {
       margin-left: 100px;
   }
+  
   .navbar-brand {
       display: inline-flex;
       font-size: 20px;
@@ -23,7 +24,6 @@
   
   .navbar {
       width: 100%;
-      height: 10vh;
   }
   
   .navbar-nav {
@@ -34,7 +34,6 @@
       width: 90%;
       margin: 0 auto;
       height: 450px;
-      
   }
   
   .carousel-inner,
@@ -93,13 +92,12 @@
   .carousel-item h2 {
       font-size: 36px;
       margin: 0 0 20px;
-      font-weight: 400; 
+      font-weight: 400;
       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
   }
   
   .carousel-item h2 span {
       font-weight: 800;
-   
   }
   
   .fa-plus {
@@ -187,7 +185,6 @@
       border-bottom: 1px solid #1f456e;
       border-bottom-width: 30%;
       padding: 5px 0;
-      
   }
   
   .block-content p {
@@ -233,10 +230,11 @@
           padding: 10px 0;
       }
   }
+  
   img {
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-drag: none;
-    -webkit-user-select: none;
-    -webkit-user-drag: none;
-}
+      user-select: none;
+      -moz-user-select: none;
+      -webkit-user-drag: none;
+      -webkit-user-select: none;
+      -webkit-user-drag: none;
+  }

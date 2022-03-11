@@ -9,16 +9,16 @@
                 <div class="form-group">
                     <label for="id">ID</label>
                     <input type="text" class="form-control" id="id" formControlName="userid" />
-                    <div *ngIf="useridv?.touched&&useridv?.invalid" class="bg-danger ">please enter your id</div>
+                    <div *ngIf="useridv?.touched&&useridv?.invalid" class="invalid-id">please enter your id</div>
                 </div>
                 <div class="form-group">
                     <label for="pass">PASSWORD</label>
                     <input type="password" class="form-control" id="pass" formControlName="userpass" />
-                    <div *ngIf="userpassv?.touched&&userpassv?.invalid" class="bg-danger ">please enter your password</div>
+                    <div *ngIf="userpassv?.touched&&userpassv?.invalid" class="invalid-pass">please enter your password</div>
 
                 </div>
                 <div class="form-group">
-                    <button>submit</button>
+                    <button id="submit">submit</button>
                 </div>
             </form>
         </div>
