@@ -1,11 +1,12 @@
 <!--top header section==> display operating time and contact-->
 <!-- navigation bar star-->
-<div class="header-top">
-    <div class="row">
-        <div class="col-lg-4 col-md-5 left-title">
-            <p>Welcome To <i>Fayoum University Hospital</i></p>
+<div class=" all-page">
+<div class="header-top ">
+    <div class="row justify-content-between">
+        <div class="col-lg-3 col-md-5 align-self-center">
+            <p>Welcome To <i style="font-weight: 800;font-family: 'Gill Sans';">Fayoum University Hospital</i></p>
         </div>
-        <div class="col-lg-4 col-md-7 right-title">
+        <div class="col-lg-4 col-md-7  text-center align-self-end">
             <p>Opening Hours : <span>Monday to Saturday - 8am to 9pm</span> </p>
         </div>
     </div>
@@ -13,6 +14,10 @@
 <div class="container-fluid">
     <header>
         <nav class="navbar navbar-expand-lg ">
+            <div class="navbar-brand logo ">
+              <a [routerLink]="'home'"><img width="70" height="50" class="d-flex ml-4" src="assets/hospitallogo.png" alt="logo" /></a>
+               
+            </div>
             <button class="btn-success navbar-toggler" (click)=" togglenavbar()" data-target="#navigation" data-toggle="collapse">
                 <span class="fas fa-bars"></span>
             </button>
@@ -177,13 +182,7 @@
                     <h5>neurology Clinic</h5>
                 </div>
             </div>
-            <div class="row mx-auto images">
-                <div class="col-md-6 col-lg-3 text-center ">
-                    <img src="assets/doctor.jpg " class="rounded-circle">
-                    <h5>DR/</h5>
-                    <h5>day</h5>
-                    <p></p>
-                </div>
+            <div class="row mx-auto ">
                 <div class="col-md-6 col-lg-3 text-center ">
                     <img src="assets/doctor.jpg " class="rounded-circle ">
                     <h5>DR/</h5>
@@ -198,6 +197,12 @@
                 </div>
                 <div class="col-md-6 col-lg-3 text-center ">
                     <img src="assets/doctor.jpg " class="rounded-circle ">
+                    <h5>DR/</h5>
+                    <h5>day</h5>
+                    <p></p>
+                </div>
+                <div class="col-md-6 col-lg-3 text-center ">
+                    <img src="assets/doctor.jpg " class="rounded-circle "> 
                     <h5>DR/</h5>
                     <h5>day</h5>
                     <p></p>
@@ -206,31 +211,30 @@
         </section>
     </main>
     <footer class="row ">
-        <div class="col-md-4 col-sm-12 ">
+        <div class="col-md-6 col-sm-12 ">
             <div class=" block-content ">
                 <h2>Learn More</h2>
                 <p><a href="https://www.fayoum.edu.eg/hospital/AboutCollegePage5.aspx# " target="_blank ">About US</a></p>
                 <p><a href=" ">Services</a></p>
             </div>
         </div>
-        <div class="col-md-8 col-sm-12 ">
+        <div class="col-md-6 col-sm-12 ">
             <div class="row ">
-                <div class="col-sm-12 col-md-4 block-content ">
+                <div class="col-sm-12 col-md-6 block-content ">
                     <h2>Contact Us</h2>
-                    <p><a href=" "><i class="fa-solid fa-envelope"></i>
-                        Contact Us</a></p>
+                    <p><a href=" "><i class="fa-solid fa-envelope "></i>Contact Us</a></p>
                     <p>
                         <a href="https://www.google.com/maps/place/%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89+%D8%A7%D9%84%D9%81%D9%8A%D9%88%D9%85+%D8%A7%D9%84%D8%AC%D8%A7%D9%85%D8%B9%D9%8A%E2%80%AD/@29.3213102,30.8340012,15z/data=!4m5!3m4!1s0x0:0xd407b2fa8d2ebe74!8m2!3d29.3213102!4d30.8340012 "
                             target="_blank "> <i class="fa-solid fa-location-dot "></i> Our Location</a>
                     </p>
-                </div>
-                <div class="col-sm-12 col-md-4 block-content ">
-                    <span class="fa-solid fa-phone "><img src="assets/contact.png " width="200px " height="100px " /></span>
-
+                    <p>
+                        <a href="tel:084-215-761"><i class="fa-solid fa-phone " aria-hidden="true"></i>084215761</a>
+                    </p>
                 </div>
             </div>
 
         </div>
 
     </footer>
+</div>
 </div>
