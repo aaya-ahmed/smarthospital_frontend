@@ -2,7 +2,6 @@
       margin: 0;
       box-sizing: border-box;
       -webkit-user-drag: text;
-      -webkit-user-select: text;
   }
   
   .header-top {
