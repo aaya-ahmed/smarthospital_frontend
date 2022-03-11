@@ -25,16 +25,15 @@ login:FormGroup=new FormGroup({
   get userpassv(){
     return this.login.controls['userpass']
   }
-  submit(){}
- /* loginform:login[]=[];
+ /* loginform:login[]=[];*/
 submit(){
   let id:string=this.useridv.value;
   let pass:string=this.userpassv.value;
-  this.service.auth_user(id,pass).subscribe(res=>{const user=res.find((a:any)=>{
+ /* this.service.auth_user(id,pass).subscribe(res=>{const user=res.find((a:any)=>{
   if (a.id===id && a.password===pass){
     this.route.navigate(['/'+a.role]);
   }
   })}
-  );
-}*/
+  );*/
+}
 }

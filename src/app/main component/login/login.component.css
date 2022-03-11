@@ -97,6 +97,10 @@ input {
     margin-top: 15px;
 }
 
+#submit:active {
+    border: none;
+}
+
 .invalid-id,
 .invalid-pass {
     color: red;
