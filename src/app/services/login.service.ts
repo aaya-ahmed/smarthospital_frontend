@@ -9,10 +9,7 @@ import { login } from '../main component/login/log';
 export class LoginService {
 private baseurl:string="https://localhost:7163/api/Authentication/login";
   constructor(private http:HttpClient) { }
-  getConfig() {
-    // now returns an Observable of Config
-    return this.http.get<login>(this.baseurl);
-  }
+ 
   auth_user(id:string,password:string) : Observable<login[]> {
     let queryParams = {"id":id,"password":password};
    return this.http.get<login[]>(this.baseurl,{params:queryParams}).pipe(map((res=>{return res})));
