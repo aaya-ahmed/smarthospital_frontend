@@ -29,5 +29,10 @@ export class ForgetpasswordComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  submit(){}
+  submit(){
+    if(this.rest.valid){}
+    else{
+      window.alert("please enter your data");
+    }
+  }
 }

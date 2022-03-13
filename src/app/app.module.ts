@@ -9,7 +9,6 @@ import { LoginComponent } from './main component/login/login.component';
 import { MedicalAnalysisComponent } from './modules/medical-analysis/medical-analysis.component';
 import { NurseComponent } from './modules/nurse/nurse.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ToastrModule } from 'ngx-toastr';
 import { ForgetpasswordComponent } from './main component/forgetpassword/forgetpassword.component';
 
 @NgModule({
@@ -27,8 +26,7 @@ import { ForgetpasswordComponent } from './main component/forgetpassword/forgetp
     AdminModule ,
   HttpClientModule,
 FormsModule,
-ReactiveFormsModule ,
-ToastrModule.forRoot()],
+ReactiveFormsModule ],
   providers: [],
   bootstrap: [AppComponent]
 })

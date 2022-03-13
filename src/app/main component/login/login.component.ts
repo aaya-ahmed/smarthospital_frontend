@@ -3,14 +3,13 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { LoginService } from 'src/app/services/login.service';
 import { logindata } from './logindata';
-import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  constructor(private route:Router,private service:LoginService,private toastr:ToastrService) { }
+  constructor(private route:Router,private service:LoginService) { }
   ngOnInit(): void {
   }
   //validation requirement for loginform
@@ -38,16 +37,13 @@ submit(){
   let user:logindata={'UserName':this.usernamev.value,'Password':this.userpassv.value};
   this.service.auth_user(user).subscribe(
     res=>{
-      console.log(res);
-      let token=res;
-      localStorage.setItem("MyToken",token);
-     this.route.navigate(['/'+this.userrolev.value])
-  },
-  err=>{
-    console.log('');
-   // this.errormes=err.error;
-  });}
+    console.log(res);
+    let token=res;
+    localStorage.setItem("MyToken",token);
+    this.route.navigate(['/'+this.userrolev.value])
+  }
+ );}
   else{
-    this.errormes='please enter yor username and password'
+    //this.errormes='please enter yor username and password'
 }
 }}
