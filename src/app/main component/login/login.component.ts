@@ -1,39 +1,53 @@
-import { Component, ElementRef, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Observable } from 'rxjs';
 import { LoginService } from 'src/app/services/login.service';
-import { login } from './log';
-
+import { logindata } from './logindata';
+import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  constructor(private route:Router,private service:LoginService) { }
+  constructor(private route:Router,private service:LoginService,private toastr:ToastrService) { }
   ngOnInit(): void {
   }
-  
+  //validation requirement for loginform
 login:FormGroup=new FormGroup({
-  userid:new FormControl('',[Validators.required]),
-  userpass:new FormControl('',[Validators.required])
+  username:new FormControl('',[Validators.required]),
+  userpass:new FormControl('',[Validators.required]),
+  userrole:new FormControl('',[Validators.required])
+
 });
-  get useridv(){
-    return this.login.controls['userid']
+//make variabe for error message when don't found user
+errormes:string='';
+//to get control list for each element in form
+  get usernamev(){
+    return this.login.controls['username']
   }
   get userpassv(){
     return this.login.controls['userpass']
   }
- /* loginform:login[]=[];*/
-submit(){
-  let id:string=this.useridv.value;
-  let pass:string=this.userpassv.value;
- /* this.service.auth_user(id,pass).subscribe(res=>{const user=res.find((a:any)=>{
-  if (a.id===id && a.password===pass){
-    this.route.navigate(['/'+a.role]);
+  get userrolev(){
+    return this.login.controls['userrole']
   }
-  })}
-  );*/
+//validate user data
+submit(){
+  if(this.login.valid){
+  let user:logindata={'UserName':this.usernamev.value,'Password':this.userpassv.value};
+  this.service.auth_user(user).subscribe(
+    res=>{
+      console.log(res);
+      let token=res;
+      localStorage.setItem("MyToken",token);
+     this.route.navigate(['/'+this.userrolev.value])
+  },
+  err=>{
+    console.log('');
+   // this.errormes=err.error;
+  });}
+  else{
+    this.errormes='please enter yor username and password'
 }
-}
+}}

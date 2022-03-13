@@ -9,6 +9,8 @@ import { LoginComponent } from './main component/login/login.component';
 import { MedicalAnalysisComponent } from './modules/medical-analysis/medical-analysis.component';
 import { NurseComponent } from './modules/nurse/nurse.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ToastrModule } from 'ngx-toastr';
+import { ForgetpasswordComponent } from './main component/forgetpassword/forgetpassword.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HomeComponent,
     LoginComponent,
     MedicalAnalysisComponent,
-    NurseComponent
+    NurseComponent,
+    ForgetpasswordComponent
     ],
   imports: [
     BrowserModule,
@@ -24,7 +27,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AdminModule ,
   HttpClientModule,
 FormsModule,
-ReactiveFormsModule ],
+ReactiveFormsModule ,
+ToastrModule.forRoot()],
   providers: [],
   bootstrap: [AppComponent]
 })

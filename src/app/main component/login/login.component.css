@@ -72,24 +72,24 @@ span {
     display: inline-block;
 }
 
-input {
+input,
+select {
     width: 100%;
     font-size: 16px;
     font-weight: 300;
     letter-spacing: 1px;
     border: 2px solid black;
-    border-radius: 30px;
+    border-radius: 10px;
     padding: 10px 20px;
     color: rgb(151, 205, 212);
     outline: none;
 }
 
 #submit {
-    width: 70%;
+    width: 30%;
     padding: 10px;
-    margin: 0 15%;
     border: none;
-    border-radius: 30px;
+    border-radius: 10px;
     background: rgb(151, 205, 212);
     color: white;
     font-weight: 300;
@@ -101,7 +101,7 @@ input {
     border: none;
 }
 
-.invalid-id,
+.invalid-name,
 .invalid-pass {
     color: red;
     font-size: 15px;
@@ -122,6 +122,15 @@ section .contentbox .formbox .inputbox p a {
     color: red;
     font-weight: 400;
     font-size: 14px;
+    text-decoration: none;
+}
+
+.forgetpassword {
+    margin: 4px 0;
+}
+
+.forgetpassword p a {
+    color: brown;
     text-decoration: none;
 }
 
