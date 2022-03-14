@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { LoginService } from 'src/app/services/login.service';
+
 import { logindata } from './logindata';
 @Component({
   selector: 'app-login',
@@ -37,13 +38,12 @@ submit(){
   let user:logindata={'UserName':this.usernamev.value,'Password':this.userpassv.value};
   this.service.auth_user(user).subscribe(
     res=>{
-    console.log(res);
-    let token=res;
-    localStorage.setItem("MyToken",token);
+    let obj={token:res};
+    localStorage.setItem("MyToken",JSON.parse(JSON.stringify(obj)).token);
     this.route.navigate(['/'+this.userrolev.value])
   },
   err=>{
-    this.errormes=err;
+    this.errormes=err.error;
   }
  );}
   else{
