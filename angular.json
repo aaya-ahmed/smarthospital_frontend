@@ -47,7 +47,8 @@
                             "node_modules/jquery/dist/jquery.min.js",
                             "node_modules/bootstrap/dist/js/bootstrap.min.js",
                             "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
-                            "src/assets/animate.js"
+                            "src/assets/animate.js",
+                            "./src/assets/validation.js"
 
                         ]
                     },

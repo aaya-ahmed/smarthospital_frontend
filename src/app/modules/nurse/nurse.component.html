@@ -34,7 +34,7 @@
                 <a class="list-group-item list-group-item-action  second-text  fw-bold" [routerLink]="'checkmedicine'" (click)="namecomponent('Show medicines')">
                     <span class="fa-solid fa-capsules"></span><span>&nbsp;&nbsp;Show medicines</span>
                 </a>
-                <a class="list-group-item list-group-item-action  text-danger  fw-bold" [routerLink]="''">
+                <a class="list-group-item list-group-item-action  text-danger  fw-bold" (click)="logout()">
                     <span class="fa-solid fa-arrow-right-from-bracket "></span><span>&nbsp;&nbsp;Log Out</span>
                 </a>
             </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 declare const  togglebar:any;
 declare const openmodel:any;
 declare const cancelmodel:any;
@@ -13,7 +14,7 @@ export class NurseComponent implements OnInit {
   toggle=false;
   activecomponent:string='';
 
-  constructor() { }
+  constructor(private route:Router) { }
 
   ngOnInit(): void {
   }
@@ -33,5 +34,9 @@ export class NurseComponent implements OnInit {
     resetview(){
       resetview();
     }
-
+    logout(){
+      localStorage.removeItem("MyToken");
+      localStorage.removeItem("MyRole");
+      this.route.navigate(['/home'])
+    }
 }

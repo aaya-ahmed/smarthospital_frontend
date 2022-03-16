@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { MedicalAnalysisRoutingModule } from './medical-analysis-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { ActivatedRoute, Router } from '@angular/router';
 
 
 @NgModule({
@@ -13,4 +14,16 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule
   ]
 })
-export class MedicalAnalysisModule { }
+export class MedicalAnalysisModule { 
+  constructor(private active:ActivatedRoute,private route:Router) {}
+
+  ngOnInit(): void {
+    console.log( localStorage.getItem("MyToken"));
+  }
+
+  logout(){
+    localStorage.removeItem("MyToken");
+    localStorage.removeItem("MyRole");
+    this.route.navigate(['/home'])
+  }
+}

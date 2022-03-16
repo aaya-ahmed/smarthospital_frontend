@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { RadiologistRoutingModule } from './radiologist-routing.module';
 import { RadiologistComponent } from './radiologist.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ActivatedRoute, Router } from '@angular/router';
 
 
 @NgModule({
@@ -16,4 +17,15 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule
   ]
 })
-export class RadiologistModule { }
+export class RadiologistModule {
+  constructor(private active:ActivatedRoute,private route:Router) {}
+
+  ngOnInit(): void {
+  }
+
+  logout(){
+    localStorage.removeItem("MyToken");
+    localStorage.removeItem("MyRole");
+    this.route.navigate(['/home'])
+  }
+ }

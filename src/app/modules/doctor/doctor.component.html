@@ -3,7 +3,7 @@
         <div class="sidebar" id="sidebar-wrapper">
             <!--logo in sidebar-->
             <div class="logo-section d-flex justify-content-center align-items-center">
-                <div class="d-flex justify-content-center align-items-center">
+                <div class="d-flex justify-content-center align-items-center" (click)="gotohome()">
                     <span class="fa-solid fa-hospital logo-icon " style="color: rgb(18, 38, 126);;"></span>
                     <p class="logo-text">University Hospital</p>
                 </div>
@@ -38,7 +38,7 @@
                 <a class="list-group-item list-group-item-action  second-text  fw-bold" [routerLink]="'patient/in'" (click)="namecomponent('In Patient')">
                     <span class="fa-solid fa-bed-pulse "></span><span>&nbsp;&nbsp;In Patient</span>
                 </a>
-                <a class="list-group-item list-group-item-action  text-danger  fw-bold" [routerLink]="''">
+                <a class="list-group-item list-group-item-action  text-danger  fw-bold" (click)="logout()">
                     <span class="fa-solid fa-arrow-right-from-bracket "></span><span>&nbsp;&nbsp;Log Out</span>
                 </a>
             </div>

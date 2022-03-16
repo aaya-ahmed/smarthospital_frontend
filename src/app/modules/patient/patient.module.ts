@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { PatientRoutingModule } from './patient-routing.module';
 import { PatientComponent } from '../patient/patient.component';
+import { ActivatedRoute, Router } from '@angular/router';
 
 
 @NgModule({
@@ -14,4 +15,15 @@ import { PatientComponent } from '../patient/patient.component';
     PatientRoutingModule
   ]
 })
-export class PatientModule { }
+export class PatientModule { 
+  constructor(private active:ActivatedRoute,private route:Router) {}
+
+  ngOnInit(): void {
+  }
+  logout(){
+    localStorage.removeItem("MyToken");
+    localStorage.removeItem("MyRole");
+    this.route.navigate(['/home'])
+  }
+
+}
