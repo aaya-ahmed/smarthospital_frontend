@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap, Params, Router } from '@angular/router';
+import { LogInAndOutService } from 'src/app/services/LogInAndOut.service';
 declare const  togglebar:any;
 @Component({
   selector: 'app-admin',
@@ -9,9 +10,12 @@ declare const  togglebar:any;
 export class AdminComponent implements OnInit {
   toggle=false;
    activecomponent:string='';
-  constructor(private active:ActivatedRoute,private route:Router) {}
+  constructor(private active:ActivatedRoute,private route:Router,private service:LogInAndOutService) {}
 
   ngOnInit(): void {
+    if(localStorage.getItem("MyRole")=="admin"){
+    }
+    else{this.route.navigate(['/home'])}
   }
 
   namecomponent(name_component:string){
@@ -23,8 +27,10 @@ export class AdminComponent implements OnInit {
     togglebar(this.toggle);
   }
   logout(){
-    localStorage.removeItem("MyToken");
-    localStorage.removeItem("MyRole");
+    this.service.logout();
+    this.route.navigate(['/home'])
+  }
+  gotohome(){
     this.route.navigate(['/home'])
   }
 }

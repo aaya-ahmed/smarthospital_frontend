@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { LogInAndOutService } from 'src/app/services/LogInAndOut.service';
 declare const  togglebar:any;
 declare const openmodel:any;
 declare const cancelmodel:any;
@@ -14,9 +15,12 @@ export class DoctorComponent implements OnInit {
   toggle=false;
   activecomponent:string='';
 
-  constructor(private route:Router) { }
+  constructor(private route:Router,private service:LogInAndOutService) { }
 
   ngOnInit(): void {
+    if(localStorage.getItem("MyRole")=="doctor"){
+    }
+    else{this.route.navigate(['/home'])}
   }
 togglebar(){
 this.toggle=!this.toggle;
@@ -35,12 +39,10 @@ resetview(){
   resetview();
 }
 logout(){
-  localStorage.removeItem("MyToken");
-  localStorage.removeItem("MyRole");
+  this.service.logout();
   this.route.navigate(['/home'])
 }
 gotohome(){
   this.route.navigate(['/home'])
-
 }
 }
