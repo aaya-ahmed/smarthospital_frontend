@@ -11,36 +11,40 @@
             </div>
         </div>
         <div class="searching-fields">
-            <div class="row mx-auto justify-content-between py-3">
+            <form #docInf="ngForm" (ngSubmit)="search(docInf.value)" class="row mx-auto justify-content-between py-3">
                 <div class="col-lg-3 col-md-6">
-                    <label for="docname ">Name</label><br>
-                    <input class="form-control" type="text " id="docname " />
+                    <label for="docname">User Name</label><br>
+                    <input class="form-control" type="text" name="docname" id="docname" ngModel/>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <label for="docname " for="docemail ">Email</label><br>
-                    <input class="form-control" type="email " id="docemail " />
+                    <label for="degree">Degree</label><br>
+                    <select class="form-control" name="degree" id="degree" ngModel>
+                        <option></option>
+                        <option value="traineedoctor">Trainee Doctor</option>
+                        <option value="residentphysician"> Resident physician</option>
+                        <option value="specialist">Specialist</option>
+                        <option value="firstspecialist">First Specialist</option>
+                        <option value="consultant">Consultant</option>
+                        <option value="firstconsultant">First Consultant</option>
+                        <option value="professor">Professor</option>
+                        <option value="firstprofessor">First Professor</option>
+                        <option value="assistantprofessor">Assistant Professor</option>
+                    </select>
                 </div>
-                <div class="col-lg-2 col-md-6">
-                    <label for="gender ">gender</label><br>
-                    <select class="form-control" name="gender " id="gender ">
-            <option value="male ">male</option>
-            <option vale="female ">female</option>
-          </select>
+                <div class="col-lg-3 col-md-6">
+                    <label for="specialization">Specialist</label><br>
+                    <select class="form-control" name="specialization" id="specialization" ngModel>
+                        <option value=" "></option>
+                        <option value="cardio ">cardio</option>
+                        <option value="Neuroscience ">Neuroscience</option>
+                        <option value="orthopedic ">orthopedic</option>
+                    </select>
                 </div>
-                <div class="col-lg-2 col-md-6">
-                    <label for="Specialist ">Specialist</label><br>
-                    <select class="form-control" name="Specialist " id="Specialist " (change)="setspec($event) ">
-            <option value=" "></option>
-            <option value="cardio ">cardio</option>
-            <option value="Neuroscience ">Neuroscience</option>
-            <option value="orthopedic ">orthopedic</option>
-          </select>
-                </div>
-            </div>
-            <div class="float-right">
-                <button class="btn btn-success" (click)="search() ">search</button>
-            </div>
 
+                <div class="float-right">
+                    <input type="submit" class="btn btn-success" value="search">
+                </div>
+            </form>
         </div>
     </div>
     <div class="table-responsive">
@@ -61,21 +65,20 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let i of doctorlist; ">
+                <tr *ngFor="let i of doctor; ">
                     <td></td>
                     <td>{{i.name}}</td>
-                    <td>{{i.id}}</td>
-                    <td>{{i.email}}</td>
+                    <td>{{i.nid}}</td>
+                    <td>{{i.mail}}</td>
                     <td>{{i.gender}}</td>
                     <td>{{i.age}}</td>
                     <td>{{i.address}}</td>
-                    <td>{{i.phone}}</td>
-                    <td>{{i.spec}}</td>
-                    <td>{{i.dgree}}</td>
+                    <td>{{i.mob_num}}</td>
+                    <td>{{i.specialization}}</td>
+                    <td>{{i.degree}}</td>
                     <td>
-                        <button> <span class="fa-solid fa-trash " style="color:red "> </span></button>
-                        <button> <span class="fa-solid fa-pen-to-square " style="color:green " > </span>
-            </button>
+                        <button (click)="deletedoctor(i.id)"> <span class="fa-solid fa-trash " style="color:red "> </span></button>
+                        <button> <span class="fa-solid fa-pen-to-square " style="color:green " > </span></button>
                     </td>
                 </tr>
             </tbody>
@@ -96,15 +99,18 @@
                     <input class="form-control" type="text" name="doctorlname" id="doctorlname" required/>
                 </div>
                 <div class="col-md-4">
-                    <label class="form-lable" for="gender">gender</label>
-                    <select id="gender" class="form-control">
-              <option vlaue="female">female</option>
-              <option value="male">male</option>
-            </select>
+                    <label class="form-lable" for="doctoruname">User Name</label>
+                    <input class="form-control" type="text" name="doctoruname" id="doctoruname" required/>
                 </div>
             </div>
             <div class="row p-3 justify-content-center">
-
+                <div class="col-md-4">
+                    <label class="form-lable" for="gender">gender</label>
+                    <select id="gender" class="form-control">
+                        <option vlaue="female">female</option>
+                        <option value="male">male</option>
+                    </select>
+                </div>
                 <div class="col-md-4">
                     <label class="form-lable" for="Date-of-Birth">Date of Birth</label>
                     <input class="form-control" type="date" name="Date-of-Birth" id="Date-of-Birth" required/>
@@ -113,12 +119,13 @@
                     <label class="form-lable" for="Email">Email</label>
                     <input class="form-control" type="email" name="Email" id="Email" required/>
                 </div>
+
+            </div>
+            <div class="row p-3 justify-content-center">
                 <div class="col-md-4">
                     <label class="form-lable" for="phone">phone</label>
                     <input class="form-control" type="tel" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{3}" required/>
                 </div>
-            </div>
-            <div class="row p-3 justify-content-center">
                 <div class="col-md-4">
                     <label class="form-lable" for="address">address</label>
                     <input class="form-control" type="text" name="address" id="address" required/>
@@ -127,25 +134,23 @@
                     <label class="form-lable" for="Image">Image</label>
                     <input class="form-control" type="file" name="Image" id="Image" accept="image/*" required/>
                 </div>
+            </div>
+            <div class="row p-3 justify-content-center">
                 <div class="col-md-4">
                     <label class="form-lable" for="degree">Degree</label>
                     <input class="form-control" type="text" name="degree" id="degree" required/>
                 </div>
-
-            </div>
-            <div class="row p-3 justify-content-center">
                 <div class="col-md-4">
                     <label class="form-lable" for="specialist">specialist</label>
                     <select id="specialist" class="form-control">
                         <option></option>
-            </select>
+                    </select>
                 </div>
                 <div class="col-md-4">
                     <label class="form-lable" for="Degree">Degree</label>
                     <select id="Degree" class="form-control">
-              <option vlaue=""></option>
-             
-            </select>
+                        <option vlaue=""></option>
+                    </select>
                 </div>
             </div>
             <div class="row p-3 justify-content-end">

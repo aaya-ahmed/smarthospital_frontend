@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
-import { doctors } from '../model/doctors';
+import { CurddoctorService } from 'src/app/services/curddoctor.service';
+import { doctors } from '../../model/doctors';
 declare const openmodel:any;
 declare const cancelmodel:any;
 
@@ -10,34 +12,17 @@ declare const cancelmodel:any;
   styleUrls: ['./doctor.component.css']
 })
 export class DoctorComponent implements OnInit {
-  dropdowntoggle:boolean=false;
-doctorlist:doctors[]=[
-{image:"",name:"ahmed",id:2783567,email:"ahmed@gmail.com",gender:"male",age:25,address:"alhoria",phone:100943,spec:"cardio",dgree:""},
-{image:"",name:"rana",id:6989867,email:"rana@gmail.com",gender:"female",age:25,address:"alhoria",phone:106743,spec:"Neuroscience",dgree:""},
-{image:"",name:"sara",id:3980267,email:"sara@gmail.com",gender:"female",age:25,address:"alhoria",phone:102543,spec:"orthopedic",dgree:""},
-{image:"",name:"mohamed",id:6983007,email:"mohamed@gmail.com",gender:"male",age:25,address:"alhoria",phone:106743,spec:"cardio",dgree:""},
-{image:"",name:"ahmed",id:2783567,email:"ahmed@gmail.com",gender:"male",age:25,address:"alhoria",phone:100943,spec:"cardio",dgree:""},
-{image:"",name:"rana",id:6989867,email:"rana@gmail.com",gender:"female",age:25,address:"alhoria",phone:106743,spec:"Neuroscience",dgree:""},
-{image:"",name:"sara",id:3980267,email:"sara@gmail.com",gender:"female",age:25,address:"alhoria",phone:102543,spec:"orthopedic",dgree:""},
-{image:"",name:"mohamed",id:6983007,email:"mohamed@gmail.com",gender:"male",age:25,address:"alhoria",phone:106743,spec:"cardio",dgree:""},
-{image:"",name:"ahmed",id:2783567,email:"ahmed@gmail.com",gender:"male",age:25,address:"alhoria",phone:100943,spec:"cardio",dgree:""},
-{image:"",name:"rana",id:6989867,email:"rana@gmail.com",gender:"female",age:25,address:"alhoria",phone:106743,spec:"Neuroscience",dgree:""},
-{image:"",name:"sara",id:3980267,email:"sara@gmail.com",gender:"female",age:25,address:"alhoria",phone:102543,spec:"orthopedic",dgree:""},
-{image:"",name:"mohamed",id:6983007,email:"mohamed@gmail.com",gender:"male",age:25,address:"alhoria",phone:106743,spec:"cardio",dgree:""},
-{image:"",name:"ahmed",id:2783567,email:"ahmed@gmail.com",gender:"male",age:25,address:"alhoria",phone:100943,spec:"cardio",dgree:""},
-{image:"",name:"rana",id:6989867,email:"rana@gmail.com",gender:"female",age:25,address:"alhoria",phone:106743,spec:"Neuroscience",dgree:""},
-{image:"",name:"sara",id:3980267,email:"sara@gmail.com",gender:"female",age:25,address:"alhoria",phone:102543,spec:"orthopedic",dgree:""},
-{image:"",name:"mohamed",id:6983007,email:"mohamed@gmail.com",gender:"male",age:25,address:"alhoria",phone:106743,spec:"cardio",dgree:""},
-{image:"",name:"ahmed",id:2783567,email:"ahmed@gmail.com",gender:"male",age:25,address:"alhoria",phone:100943,spec:"cardio",dgree:""},
-{image:"",name:"rana",id:6989867,email:"rana@gmail.com",gender:"female",age:25,address:"alhoria",phone:106743,spec:"Neuroscience",dgree:""},
-{image:"",name:"sara",id:3980267,email:"sara@gmail.com",gender:"female",age:25,address:"alhoria",phone:102543,spec:"orthopedic",dgree:""},
-{image:"",name:"mohamed",id:6983007,email:"mohamed@gmail.com",gender:"male",age:25,address:"alhoria",phone:106743,spec:"cardio",dgree:""}];
-doctor:doctors[]=[];
-specialist:string='';
-  constructor(private router:Router) { }
+
+  constructor(private router:Router,private service:CurddoctorService) { 
+  }
 
   ngOnInit(): void {
+        this.service.getdoctor().subscribe(res=>this.doctor=res);
+
   }
+  dropdowntoggle:boolean=false;
+  doctor:any=[];
+  specialist:string='';
   openmodel(){
     openmodel();
   }
@@ -47,15 +32,21 @@ specialist:string='';
   setspec(specialist:any){
     this.specialist=specialist.target.value;
   }
-search(){
-  for(let i of this.doctorlist){
-    if(this.specialist==i.spec){
-      this.doctor.push(i);
-      break;
-    }
-}}
 alldoctors(){
-  this.doctorlist;
+  this.service.getdoctor().subscribe(res=>this.doctor=res);
+} 
+deletedoctor(id:number){
+  this.service.deletedoctor(id).subscribe(
+    res =>{console.log(res)});
+  this.service.getdoctor().subscribe(res=>console.log("success"));  
+}
+search(docInf:any){
+
+}
+adddoctor(){
+ // let doctor:doctors={};
+  //this.service.adddoctor(doctor).subscribe(res=>{console.log(res)})
+
 }
 toggledropdown(){
   this.dropdowntoggle=!this.dropdowntoggle;

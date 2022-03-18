@@ -15,6 +15,8 @@ import { SpecialistsComponent } from './specialists/specialists.component';
 import { DoctorSchaduleComponent } from './doctor-schadule/doctor-schadule.component';
 import { DepartmentsComponent } from './departments/departments.component';
 import { SeatBedsComponent } from './seat-beds/seat-beds.component';
+import { FormsModule } from '@angular/forms';
+import { CurddoctorService } from 'src/app/services/curddoctor.service';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { SeatBedsComponent } from './seat-beds/seat-beds.component';
   imports: [
     AdminRoutingModule,
     CommonModule,
+    FormsModule,
     HttpClientModule
-  ]
+  ],
+  providers:[CurddoctorService]
 })
 export class AdminModule { }

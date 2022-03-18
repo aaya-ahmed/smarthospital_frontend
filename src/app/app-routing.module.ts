@@ -4,12 +4,14 @@ import { ForgetpasswordComponent } from './main component/forgetpassword/forgetp
 import { HomeComponent } from './main component/home/home.component';
 import { LoginComponent } from './main component/login/login.component';
 import { MakeAppoinmentComponent } from './main component/make-appoinment/make-appoinment.component';
+import { SignUpComponent } from './main component/sign-up/sign-up/sign-up.component';
 
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
   {path:'home',component:HomeComponent},
   {path:'login',component:LoginComponent},
+  {path:'reg',component:SignUpComponent},
   {path:'forgetpassword',component:ForgetpasswordComponent},
   {path:'appointment',component:MakeAppoinmentComponent},
   {path: 'admin', loadChildren: () => import('./modules/admin/admin.module').then(m => m.AdminModule) },

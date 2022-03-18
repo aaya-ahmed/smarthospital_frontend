@@ -10,6 +10,7 @@ import { MedicalAnalysisComponent } from './modules/medical-analysis/medical-ana
 import { NurseComponent } from './modules/nurse/nurse.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ForgetpasswordComponent } from './main component/forgetpassword/forgetpassword.component';
+import { SignUpComponent } from './main component/sign-up/sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ForgetpasswordComponent } from './main component/forgetpassword/forgetp
     LoginComponent,
     MedicalAnalysisComponent,
     NurseComponent,
-    ForgetpasswordComponent
+    ForgetpasswordComponent,
+    SignUpComponent
     ],
   imports: [
     BrowserModule,
