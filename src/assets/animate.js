@@ -13,12 +13,12 @@ function togglebar(x) {
     }
 }
 
-function openmodel() {
-    document.getElementById('id01').style.display = 'block';
+function openmodel(id) {
+    document.getElementById(id).style.display = 'block';
 }
 
-function cancelmodel() {
-    document.getElementById('id01').style.display = 'none';
+function cancelmodel(id) {
+    document.getElementById(id).style.display = 'none';
 }
 
 function toggleview() {

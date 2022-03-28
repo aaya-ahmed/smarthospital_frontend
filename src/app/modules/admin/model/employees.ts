@@ -1,4 +1,4 @@
-export interface staff{
+export interface employees{
     image:string;
     name:string;
     id:number;

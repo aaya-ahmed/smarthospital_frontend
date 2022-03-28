@@ -1,0 +1,66 @@
+div.adding-form {
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+    background-color: white;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+input:checked~div.adding-form {
+    max-height: fit-content;
+    padding: 1rem;
+}
+
+.adding-label label {
+    padding: 0 10px;
+    margin: 5px 2.5rem;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.adding-form form label {
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+#add_btn {
+    border: 0;
+    background-color: rgba(141, 178, 207, 0.4);
+    padding: 10px;
+    margin: 10px 0;
+    margin-left: 3rem;
+    border-radius: 4px;
+}
+
+.adding-label label {
+    width: 90%;
+    border: none;
+    text-decoration: none;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+input[type=checkbox] {
+    visibility: hidden;
+    position: absolute;
+}
+
+.display-info {
+    width: 100%;
+    height: 70vh;
+}
+
+.table {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.table tbody tr td {
+    text-align: center;
+}
+
+.table tbody tr td button {
+    border: 0;
+    background-color: rgba(0, 0, 0, 0);
+}

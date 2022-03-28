@@ -13,9 +13,9 @@ export class AdminComponent implements OnInit {
   constructor(private active:ActivatedRoute,private route:Router,private service:LogInAndOutService) {}
 
   ngOnInit(): void {
-    if(localStorage.getItem("MyRole")=="admin"){
+   /* if(localStorage.getItem("MyRole")=="admin"){
     }
-    else{this.route.navigate(['/home'])}
+    else{this.route.navigate(['/home'])}*/
   }
 
   namecomponent(name_component:string){

@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 import { doctors } from '../modules/model/doctors';
 
 @Injectable({
@@ -9,7 +9,7 @@ import { doctors } from '../modules/model/doctors';
 export class CurddoctorService {
 
   constructor(private http:HttpClient) { }
-  private url:string="https://localhost:7045/api/DoctorCrud"
+  private url:string="https://localhost:7046/api/DoctorCrud"
 
   getdoctor():Observable<doctors[]>{
     return this.http.get<doctors[]>(this.url,{responseType:"json"});
@@ -19,6 +19,10 @@ export class CurddoctorService {
     return this.http.delete(this.url+'/'+id);
   }
   adddoctor(doctor:doctors){
+   
     return this.http.post(this.url,doctor);
+  }
+  getdoctorbyid(id:number):Observable<doctors[]>{
+    return this.http.get<doctors[]>(this.url+'/'+id,{responseType:"json"});
   }
 }

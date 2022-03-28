@@ -12,6 +12,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ForgetpasswordComponent } from './main component/forgetpassword/forgetpassword.component';
 import { SignUpComponent } from './main component/sign-up/sign-up/sign-up.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

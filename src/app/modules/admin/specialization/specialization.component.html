@@ -2,27 +2,34 @@
     <input type="checkbox" id="check" />
     <div class="adding-label">
         <div class="d-flex">
-            <label for="check"><i class="fa-solid fa-plus "></i> Add Department</label>
+            <label for="check"><i class="fa-solid fa-plus "></i> Add Specialization </label>
         </div>
     </div>
     <div class="adding-form">
         <form>
             <div class="row justify-content-around">
                 <div class="form-group col-5">
-                    <label for="departmentname">
-            Name 
-        </label>
-                    <input type="text" class="form-control" name="departmentname" id="departmentname" />
+                    <label for="specializationname">
+                        Name 
+                    </label>
+                    <input type="text" class="form-control" name="dep-specializationname" id="dep-specializationname" required pattern="^[a-zA-Z]$" />
                 </div>
-                <div class="form-group col-6">
-                    <label for="departmentdescription">
-                Description </label>
-                    <textarea class="form-control" name="departmentdescription" id="departmentdescription" rows=4 cols=60></textarea>
+                <div class="form-group col-5">
+                    <label for="dep-specializationname">
+                        Department
+                    </label>
+                    <select class="form-control" required>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                    </select>
+
                 </div>
+
             </div>
 
             <div class="form-group">
-                <button id="add_btn">Add Department</button>
+                <button id="add_btn">Add Specialization</button>
 
             </div>
         </form>
@@ -31,7 +38,7 @@
         <table class=" table table-striped ">
             <thead>
                 <th>Name</th>
-                <th>Description</th>
+                <th>Department</th>
                 <th>State</th>
                 <th></th>
             </thead>

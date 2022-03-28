@@ -71,12 +71,13 @@ table tbody tr td button {
     margin: 0 auto;
 }
 
-.modal {
+.addmodal,
+.updatemodal {
     width: 100%;
     display: none;
     z-index: 3;
     display: none;
-    padding-top: 60px;
+    padding: 60px 0px;
     position: fixed;
     top: 0;
     left: 0;
@@ -85,24 +86,34 @@ table tbody tr td button {
     background-color: rgba(0, 0, 0, 0.7);
 }
 
-.modal .container {
-    width: 60%;
+.addmodal .container,
+.updatemodal .container {
+    width: 70%;
     background-color: white;
     border-radius: 10px;
     border: 2px solid #bcc5d6;
 }
 
-.modal .container h4 {
+.updatemodal .container {
+    width: 50%;
+}
+
+.addmodal .container h4,
+.updatemodal .container h4 {
     text-align: center;
     padding: 10px 0px;
     color: #38568d;
 }
 
 #submit,
-#cancel {
+#submitlist,
+#cancel,
+#cancellist {
     background-color: #38608d;
     border: none;
     color: white;
+    margin-top: 0.5rem;
+    margin-bottom: 2px;
 }
 
 .searching button {
@@ -110,6 +121,20 @@ table tbody tr td button {
 }
 
 .btn {
+    color: white;
     background-color: #38608d;
     border: none;
+}
+
+@media only screen and (max-width: 800px) {
+    .modal .container {
+        width: 80%;
+        background-color: white;
+        border-radius: 10px;
+        border: 2px solid #bcc5d6;
+    }
+    .modal .container .row {
+        padding: 5px 0;
+        margin: 0;
+    }
 }
